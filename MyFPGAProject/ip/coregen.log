@@ -1,0 +1,42 @@
+INFO:sim:172 - Generating IP...
+Resolving generics for 'pllClock'...
+Applying external generics to 'pllClock'...
+Delivering associated files for 'pllClock'...
+WARNING:sim - Component clk_wiz_v3_6 does not have a valid model name for
+   Verilog synthesis
+Delivering EJava files for 'pllClock'...
+Delivered 3 files into directory
+E:/MyTangCeProject/MyFPGAProject/ip/tmp/_cg/pllClock
+Delivered 1 file into directory
+E:/MyTangCeProject/MyFPGAProject/ip/tmp/_cg/pllClock
+Generating ASY schematic symbol...
+Loading device for application Rf_Device from file '6slx16.nph' in environment
+D:\Xilinx\Xilinx14.7\14.7\ISE_DS\ISE\.
+INFO:sim:949 - Finished generation of ASY schematic symbol.
+Generating SYM schematic symbol for 'pllClock'...
+Generating ISE project...
+XCO file found: pllClock.xco
+XMDF file found: pllClock_xmdf.tcl
+Adding E:/MyTangCeProject/MyFPGAProject/ip/tmp/_cg/pllClock.asy -view all
+-origin_type imported
+Adding E:/MyTangCeProject/MyFPGAProject/ip/tmp/_cg/pllClock.ucf -view all
+-origin_type created
+Adding E:/MyTangCeProject/MyFPGAProject/ip/tmp/_cg/pllClock.v -view all
+-origin_type created
+INFO:HDLCompiler:1845 - Analyzing Verilog file
+   "E:/MyTangCeProject/MyFPGAProject/ip/tmp/_cg/pllClock.v" into library work
+INFO:ProjectMgmt - Parsing design hierarchy completed successfully.
+Adding E:/MyTangCeProject/MyFPGAProject/ip/tmp/_cg/pllClock.veo -view all
+-origin_type imported
+INFO:TclTasksC:2116 - The automatic calculation of top has been turned-off.
+   Please set the new top explicitly by running the "project set top" command.
+   To re-calculate the new top automatically, set the "Auto Implementation Top"
+   property to true.
+Top level has been set to "/pllClock"
+Generating README file...
+Generating FLIST file...
+INFO:sim:948 - Finished FLIST file generation.
+Launching README viewer...
+Moving files to output directory...
+Finished moving files to output directory
+Wrote CGP file for project 'pllClock'.

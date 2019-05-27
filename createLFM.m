@@ -4,9 +4,9 @@ clear all;
 % creat my chirp signal
 % %%%%%%%%%%%%%%%%%%% %
 signal.chirpBegin = 1;
-signal.chirpEnd = 500;      %500/32 -> 15.625us
+signal.chirpEnd = 512;      %512/100 -> 5.12us
 % signal codes here
-signal.chirpFs=32e6;  %閲囨牱棰戠巼
+signal.chirpFs=100e6;  %閲囨牱棰戠巼
 signal.chirpW=5e6;    %chirp甯﹀
 signal.chirpF=1.5e6;  %chirp璧峰棰戠巼
 signal.chirpT=signal.chirpEnd/signal.chirpFs;   %鎸佺画鏃堕暱
@@ -23,7 +23,7 @@ impulse_response=impulse_response.*hanning(max(size(impulse_response)))';
 fid1 = fopen('matlab2rom.coe','w');   %写到sin.coe文件，用来初始化sin_rom
 fprintf(fid1,'MEMORY_INITIALIZATION_RADIX=16;\n');
 fprintf(fid1,'MEMORY_INITIALIZATION_VECTOR=\n');
-for i = 1:1:500
+for i = signal.chirpBegin:1:signal.chirpEnd
     if fileChirp(i)==2^8
         fileChirp(i)=fileChirp(i)-1;
     end

@@ -1,0 +1,102 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dE:/MyTangCeProject/MyFPGAProject
+T_opt
+!s110 1558946870
+V^WeCaf;de_QfE^KRJ=X8f1
+04 5 4 work tb_Tx fast 0
+04 4 4 work glbl fast 0
+=1-6c4b9010bcbc-5ceba436-179-3a04
+o-quiet -auto_acc_if_foreign -work work -L xilinxcorelib_ver -L unisims_ver -L unimacro_ver -L secureip +acc
+n@_opt
+OL;O;10.4;61
+vchirpRom
+Z1 !s110 1558946866
+!i10b 1
+!s100 8fR7MHj9HWHbdAIb3aPao3
+IcDb^`187>;jFoX^I;8:DD0
+Z2 VDg1SIo80bB@j0V0VzS_@n1
+R0
+w1558940301
+8ipcore_dir/chirpRom/chirpRom.v
+Fipcore_dir/chirpRom/chirpRom.v
+L0 39
+Z3 OL;L;10.4;61
+r1
+!s85 0
+31
+!s108 1558946866.702000
+!s107 ipcore_dir/chirpRom/chirpRom.v|
+!s90 -reportprogress|300|ipcore_dir/chirpRom/chirpRom.v|
+!i113 0
+Z4 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+nchirp@rom
+vglbl
+R1
+!i10b 1
+!s100 UlJ]9LUWO:ZWoRO62F9fW3
+I`FIRd0Mg=So1P]A;Vf8FG1
+R2
+R0
+w1381681120
+8D:/Xilinx/Xilinx14.7/14.7/ISE_DS/ISE/verilog/src/glbl.v
+FD:/Xilinx/Xilinx14.7/14.7/ISE_DS/ISE/verilog/src/glbl.v
+L0 5
+R3
+r1
+!s85 0
+31
+!s108 1558946866.980000
+!s107 D:/Xilinx/Xilinx14.7/14.7/ISE_DS/ISE/verilog/src/glbl.v|
+!s90 -reportprogress|300|D:/Xilinx/Xilinx14.7/14.7/ISE_DS/ISE/verilog/src/glbl.v|
+!i113 0
+R4
+vtb_Tx
+R1
+!i10b 1
+!s100 1YE5e7FHX1UZX^J<`HV]m1
+I7<IN:[1k]YBDhlj_jhj8Q1
+R2
+R0
+w1558946862
+8sim/tb_Tx.v
+Fsim/tb_Tx.v
+L0 25
+R3
+r1
+!s85 0
+31
+!s108 1558946866.906000
+!s107 sim/tb_Tx.v|
+!s90 -reportprogress|300|sim/tb_Tx.v|
+!i113 0
+R4
+ntb_@tx
+vTx
+R1
+!i10b 1
+!s100 74iDV8i6e;7::V]8CA33W1
+I<D<bVSlmOi@57oFUJl^CQ0
+R2
+R0
+w1558946852
+8design/Tx.v
+Fdesign/Tx.v
+L0 21
+R3
+r1
+!s85 0
+31
+!s108 1558946866.800000
+!s107 design/Tx.v|
+!s90 -reportprogress|300|design/Tx.v|
+!i113 0
+R4
+n@tx
