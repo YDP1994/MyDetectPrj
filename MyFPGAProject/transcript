@@ -13,411 +13,149 @@
 # //  FURTHERMORE, THIS INFORMATION IS PROHIBITED FROM DISCLOSURE UNDER
 # //  THE TRADE SECRETS ACT, 18 U.S.C. SECTION 1905.
 # //
-# do {tb_Tx.fdo}
-# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
-# Start time: 16:32:13 on May 27,2019
-# vlog -reportprogress 300 ipcore_dir/chirpRom/chirpRom.v 
-# -- Compiling module chirpRom
-# 
-# Top level modules:
-# 	chirpRom
-# End time: 16:32:13 on May 27,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
-# Start time: 16:32:13 on May 27,2019
-# vlog -reportprogress 300 design/Tx.v 
-# -- Compiling module Tx
-# 
-# Top level modules:
-# 	Tx
-# End time: 16:32:13 on May 27,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
-# Start time: 16:32:13 on May 27,2019
-# vlog -reportprogress 300 sim/tb_Tx.v 
-# -- Compiling module tb_Tx
-# ** Error: sim/tb_Tx.v(47): (vlog-2730) Undefined variable: 'clk'.
-# 
-# End time: 16:32:13 on May 27,2019, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-# ** Error: D:/Modelsim/win64/vlog failed.
-# Error in macro ./tb_Tx.fdo line 25
-# D:/Modelsim/win64/vlog failed.
-#     while executing
-# "vlog  "sim/tb_Tx.v""
-do {tb_Tx.fdo}
+# do {tb_Ctrl.fdo}
 # ** Warning: (vlib-34) Library already exists at "work".
 # 
 # Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
-# Start time: 16:32:29 on May 27,2019
-# vlog -reportprogress 300 ipcore_dir/chirpRom/chirpRom.v 
-# -- Compiling module chirpRom
+# Start time: 10:17:06 on May 28,2019
+# vlog -reportprogress 300 design/Ctrl.v 
+# -- Compiling module Ctrl
+# ** Error: design/Ctrl.v(115): (vlog-2730) Undefined variable: 'overRx'.
+# 
+# End time: 10:17:06 on May 28,2019, Elapsed time: 0:00:00
+# Errors: 1, Warnings: 0
+# ** Error: D:/Modelsim/win64/vlog failed.
+# Error in macro ./tb_Ctrl.fdo line 23
+# D:/Modelsim/win64/vlog failed.
+#     while executing
+# "vlog  "design/Ctrl.v""
+do {tb_Ctrl.fdo}
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+# Start time: 10:17:47 on May 28,2019
+# vlog -reportprogress 300 design/Ctrl.v 
+# -- Compiling module Ctrl
 # 
 # Top level modules:
-# 	chirpRom
-# End time: 16:32:29 on May 27,2019, Elapsed time: 0:00:00
+# 	Ctrl
+# End time: 10:17:47 on May 28,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
-# Start time: 16:32:29 on May 27,2019
-# vlog -reportprogress 300 design/Tx.v 
-# -- Compiling module Tx
+# Start time: 10:17:47 on May 28,2019
+# vlog -reportprogress 300 sim/tb_Ctrl.v 
+# -- Compiling module tb_Ctrl
 # 
 # Top level modules:
-# 	Tx
-# End time: 16:32:29 on May 27,2019, Elapsed time: 0:00:00
+# 	tb_Ctrl
+# End time: 10:17:47 on May 28,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
-# Start time: 16:32:29 on May 27,2019
-# vlog -reportprogress 300 sim/tb_Tx.v 
-# -- Compiling module tb_Tx
-# 
-# Top level modules:
-# 	tb_Tx
-# End time: 16:32:29 on May 27,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
-# Start time: 16:32:29 on May 27,2019
+# Start time: 10:17:47 on May 28,2019
 # vlog -reportprogress 300 D:/Xilinx/Xilinx14.7/14.7/ISE_DS/ISE/verilog/src/glbl.v 
 # -- Compiling module glbl
 # 
 # Top level modules:
 # 	glbl
-# End time: 16:32:29 on May 27,2019, Elapsed time: 0:00:00
+# End time: 10:17:47 on May 28,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# vsim -gui -do "do {tb_Tx.fdo}" 
-# Start time: 16:32:29 on May 27,2019
+# vsim -gui -do "do {tb_Ctrl.fdo}" 
+# Start time: 10:17:48 on May 28,2019
 # ** Note: (vsim-3812) Design is being optimized...
 # 
-# Loading work.tb_Tx(fast)
-# Loading work.Tx(fast)
-# Loading work.chirpRom(fast)
-# Loading xilinxcorelib_ver.BLK_MEM_GEN_V7_3(fast)
-# Loading xilinxcorelib_ver.BLK_MEM_GEN_V7_3_mem_module(fast)
-# Loading xilinxcorelib_ver.BLK_MEM_GEN_V7_3_output_stage(fast)
-# Loading xilinxcorelib_ver.BLK_MEM_GEN_V7_3_softecc_output_reg_stage(fast)
-# Loading work.glbl(fast)
-# ** Warning: (vsim-3015) design/Tx.v(53): [PCDPC] - Port size (9) does not match connection size (1) for port 'addra'. The port definition is at: ipcore_dir/chirpRom/chirpRom.v(41).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_Tx/uut/MyChirp File: ipcore_dir/chirpRom/chirpRom.v
-# ** Warning: (vsim-3015) design/Tx.v(53): [PCDPC] - Port size (8) does not match connection size (1) for port 'douta'. The port definition is at: ipcore_dir/chirpRom/chirpRom.v(42).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_Tx/uut/MyChirp File: ipcore_dir/chirpRom/chirpRom.v
-# .main_pane.wave.interior.cs.body.pw.wf
-# .main_pane.structure.interior.cs.body.struct
-# .main_pane.objects.interior.cs.body.tree
-#  Block Memory Generator CORE Generator module loading initial data...
-#  Block Memory Generator data initialization complete.
-# Block Memory Generator CORE Generator module tb_Tx.uut.MyChirp.inst.native_mem_module.blk_mem_gen_v7_3_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
-do {tb_Tx.fdo}
-# ** Warning: (vlib-34) Library already exists at "work".
+# ** Note: (vopt-143) Recognized 1 FSM in module "Ctrl(fast)".
 # 
-# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
-# Start time: 16:33:47 on May 27,2019
-# vlog -reportprogress 300 ipcore_dir/chirpRom/chirpRom.v 
-# -- Compiling module chirpRom
-# 
-# Top level modules:
-# 	chirpRom
-# End time: 16:33:47 on May 27,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
-# Start time: 16:33:47 on May 27,2019
-# vlog -reportprogress 300 design/Tx.v 
-# -- Compiling module Tx
-# ** Error: design/Tx.v(33): (vlog-2730) Undefined variable: 'rom_data'.
-# 
-# ** Error (suppressible): design/Tx.v(36): (vlog-2388) 'rom_data' already declared in this scope (Tx).
-# 
-# End time: 16:33:47 on May 27,2019, Elapsed time: 0:00:00
-# Errors: 2, Warnings: 0
-# ** Error: D:/Modelsim/win64/vlog failed.
-# Error in macro ./tb_Tx.fdo line 24
-# D:/Modelsim/win64/vlog failed.
-#     while executing
-# "vlog  "design/Tx.v""
-do {tb_Tx.fdo}
-# ** Warning: (vlib-34) Library already exists at "work".
-# 
-# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
-# Start time: 16:33:58 on May 27,2019
-# vlog -reportprogress 300 ipcore_dir/chirpRom/chirpRom.v 
-# -- Compiling module chirpRom
-# 
-# Top level modules:
-# 	chirpRom
-# End time: 16:33:58 on May 27,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
-# Start time: 16:33:58 on May 27,2019
-# vlog -reportprogress 300 design/Tx.v 
-# -- Compiling module Tx
-# ** Error: design/Tx.v(33): (vlog-2730) Undefined variable: 'rom_douta'.
-# 
-# End time: 16:33:58 on May 27,2019, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-# ** Error: D:/Modelsim/win64/vlog failed.
-# Error in macro ./tb_Tx.fdo line 24
-# D:/Modelsim/win64/vlog failed.
-#     while executing
-# "vlog  "design/Tx.v""
-do {tb_Tx.fdo}
-# ** Warning: (vlib-34) Library already exists at "work".
-# 
-# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
-# Start time: 16:34:14 on May 27,2019
-# vlog -reportprogress 300 ipcore_dir/chirpRom/chirpRom.v 
-# -- Compiling module chirpRom
-# 
-# Top level modules:
-# 	chirpRom
-# End time: 16:34:14 on May 27,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
-# Start time: 16:34:14 on May 27,2019
-# vlog -reportprogress 300 design/Tx.v 
-# -- Compiling module Tx
-# 
-# Top level modules:
-# 	Tx
-# End time: 16:34:14 on May 27,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
-# Start time: 16:34:14 on May 27,2019
-# vlog -reportprogress 300 sim/tb_Tx.v 
-# -- Compiling module tb_Tx
-# 
-# Top level modules:
-# 	tb_Tx
-# End time: 16:34:14 on May 27,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
-# Start time: 16:34:14 on May 27,2019
-# vlog -reportprogress 300 D:/Xilinx/Xilinx14.7/14.7/ISE_DS/ISE/verilog/src/glbl.v 
-# -- Compiling module glbl
-# 
-# Top level modules:
-# 	glbl
-# End time: 16:34:14 on May 27,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vsim 
-# Start time: 16:34:17 on May 27,2019
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# 
-# Loading work.tb_Tx(fast)
-# Loading work.Tx(fast)
-# Loading work.chirpRom(fast)
-# Loading xilinxcorelib_ver.BLK_MEM_GEN_V7_3(fast)
-# Loading xilinxcorelib_ver.BLK_MEM_GEN_V7_3_mem_module(fast)
-# Loading xilinxcorelib_ver.BLK_MEM_GEN_V7_3_output_stage(fast)
-# Loading xilinxcorelib_ver.BLK_MEM_GEN_V7_3_softecc_output_reg_stage(fast)
-# Loading work.glbl(fast)
-# ** Warning: (vsim-3015) design/Tx.v(55): [PCDPC] - Port size (9) does not match connection size (1) for port 'addra'. The port definition is at: ipcore_dir/chirpRom/chirpRom.v(41).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_Tx/uut/MyChirp File: ipcore_dir/chirpRom/chirpRom.v
-# .main_pane.wave.interior.cs.body.pw.wf
-# .main_pane.structure.interior.cs.body.struct
-# .main_pane.objects.interior.cs.body.tree
-#  Block Memory Generator CORE Generator module loading initial data...
-#  Block Memory Generator data initialization complete.
-# Block Memory Generator CORE Generator module tb_Tx.uut.MyChirp.inst.native_mem_module.blk_mem_gen_v7_3_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
-do {tb_Tx.fdo}
-# ** Warning: (vlib-34) Library already exists at "work".
-# 
-# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
-# Start time: 16:38:22 on May 27,2019
-# vlog -reportprogress 300 ipcore_dir/chirpRom/chirpRom.v 
-# -- Compiling module chirpRom
-# 
-# Top level modules:
-# 	chirpRom
-# End time: 16:38:22 on May 27,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
-# Start time: 16:38:22 on May 27,2019
-# vlog -reportprogress 300 design/Tx.v 
-# -- Compiling module Tx
-# 
-# Top level modules:
-# 	Tx
-# End time: 16:38:22 on May 27,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
-# Start time: 16:38:22 on May 27,2019
-# vlog -reportprogress 300 sim/tb_Tx.v 
-# -- Compiling module tb_Tx
-# 
-# Top level modules:
-# 	tb_Tx
-# End time: 16:38:22 on May 27,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
-# Start time: 16:38:22 on May 27,2019
-# vlog -reportprogress 300 D:/Xilinx/Xilinx14.7/14.7/ISE_DS/ISE/verilog/src/glbl.v 
-# -- Compiling module glbl
-# 
-# Top level modules:
-# 	glbl
-# End time: 16:38:22 on May 27,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vsim 
-# Start time: 16:38:26 on May 27,2019
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# 
-# Loading work.tb_Tx(fast)
-# Loading work.Tx(fast)
-# Loading work.chirpRom(fast)
-# Loading xilinxcorelib_ver.BLK_MEM_GEN_V7_3(fast)
-# Loading xilinxcorelib_ver.BLK_MEM_GEN_V7_3_mem_module(fast)
-# Loading xilinxcorelib_ver.BLK_MEM_GEN_V7_3_output_stage(fast)
-# Loading xilinxcorelib_ver.BLK_MEM_GEN_V7_3_softecc_output_reg_stage(fast)
-# Loading work.glbl(fast)
-# ** Warning: (vsim-3015) design/Tx.v(55): [PCDPC] - Port size (9) does not match connection size (8) for port 'addra'. The port definition is at: ipcore_dir/chirpRom/chirpRom.v(41).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_Tx/uut/MyChirp File: ipcore_dir/chirpRom/chirpRom.v
-# .main_pane.wave.interior.cs.body.pw.wf
-# .main_pane.structure.interior.cs.body.struct
-# .main_pane.objects.interior.cs.body.tree
-#  Block Memory Generator CORE Generator module loading initial data...
-#  Block Memory Generator data initialization complete.
-# Block Memory Generator CORE Generator module tb_Tx.uut.MyChirp.inst.native_mem_module.blk_mem_gen_v7_3_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
-do {tb_Tx.fdo}
-# ** Warning: (vlib-34) Library already exists at "work".
-# 
-# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
-# Start time: 16:40:55 on May 27,2019
-# vlog -reportprogress 300 ipcore_dir/chirpRom/chirpRom.v 
-# -- Compiling module chirpRom
-# 
-# Top level modules:
-# 	chirpRom
-# End time: 16:40:55 on May 27,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
-# Start time: 16:40:55 on May 27,2019
-# vlog -reportprogress 300 design/Tx.v 
-# -- Compiling module Tx
-# ** Error (suppressible): design/Tx.v(36): (vlog-2388) 'rom_addr' already declared in this scope (Tx).
-# 
-# End time: 16:40:55 on May 27,2019, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-# ** Error: D:/Modelsim/win64/vlog failed.
-# Error in macro ./tb_Tx.fdo line 24
-# D:/Modelsim/win64/vlog failed.
-#     while executing
-# "vlog  "design/Tx.v""
-do {tb_Tx.fdo}
-# ** Warning: (vlib-34) Library already exists at "work".
-# 
-# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
-# Start time: 16:41:28 on May 27,2019
-# vlog -reportprogress 300 ipcore_dir/chirpRom/chirpRom.v 
-# -- Compiling module chirpRom
-# 
-# Top level modules:
-# 	chirpRom
-# End time: 16:41:29 on May 27,2019, Elapsed time: 0:00:01
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
-# Start time: 16:41:29 on May 27,2019
-# vlog -reportprogress 300 design/Tx.v 
-# -- Compiling module Tx
-# 
-# Top level modules:
-# 	Tx
-# End time: 16:41:29 on May 27,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
-# Start time: 16:41:29 on May 27,2019
-# vlog -reportprogress 300 sim/tb_Tx.v 
-# -- Compiling module tb_Tx
-# 
-# Top level modules:
-# 	tb_Tx
-# End time: 16:41:29 on May 27,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
-# Start time: 16:41:29 on May 27,2019
-# vlog -reportprogress 300 D:/Xilinx/Xilinx14.7/14.7/ISE_DS/ISE/verilog/src/glbl.v 
-# -- Compiling module glbl
-# 
-# Top level modules:
-# 	glbl
-# End time: 16:41:29 on May 27,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vsim 
-# Start time: 16:41:32 on May 27,2019
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# 
-# Loading work.tb_Tx(fast)
-# Loading work.Tx(fast)
-# Loading work.chirpRom(fast)
-# Loading xilinxcorelib_ver.BLK_MEM_GEN_V7_3(fast)
-# Loading xilinxcorelib_ver.BLK_MEM_GEN_V7_3_mem_module(fast)
-# Loading xilinxcorelib_ver.BLK_MEM_GEN_V7_3_output_stage(fast)
-# Loading xilinxcorelib_ver.BLK_MEM_GEN_V7_3_softecc_output_reg_stage(fast)
-# Loading work.glbl(fast)
-# ** Warning: (vsim-3015) design/Tx.v(58): [PCDPC] - Port size (9) does not match connection size (8) for port 'addra'. The port definition is at: ipcore_dir/chirpRom/chirpRom.v(41).
-#    Time: 0 ps  Iteration: 0  Instance: /tb_Tx/uut/MyChirp File: ipcore_dir/chirpRom/chirpRom.v
-# .main_pane.wave.interior.cs.body.pw.wf
-# .main_pane.structure.interior.cs.body.struct
-# .main_pane.objects.interior.cs.body.tree
-#  Block Memory Generator CORE Generator module loading initial data...
-#  Block Memory Generator data initialization complete.
-# Block Memory Generator CORE Generator module tb_Tx.uut.MyChirp.inst.native_mem_module.blk_mem_gen_v7_3_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
-do {tb_Tx.fdo}
-# ** Warning: (vlib-34) Library already exists at "work".
-# 
-# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
-# Start time: 16:47:46 on May 27,2019
-# vlog -reportprogress 300 ipcore_dir/chirpRom/chirpRom.v 
-# -- Compiling module chirpRom
-# 
-# Top level modules:
-# 	chirpRom
-# End time: 16:47:46 on May 27,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
-# Start time: 16:47:46 on May 27,2019
-# vlog -reportprogress 300 design/Tx.v 
-# -- Compiling module Tx
-# 
-# Top level modules:
-# 	Tx
-# End time: 16:47:46 on May 27,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
-# Start time: 16:47:46 on May 27,2019
-# vlog -reportprogress 300 sim/tb_Tx.v 
-# -- Compiling module tb_Tx
-# 
-# Top level modules:
-# 	tb_Tx
-# End time: 16:47:46 on May 27,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
-# Start time: 16:47:46 on May 27,2019
-# vlog -reportprogress 300 D:/Xilinx/Xilinx14.7/14.7/ISE_DS/ISE/verilog/src/glbl.v 
-# -- Compiling module glbl
-# 
-# Top level modules:
-# 	glbl
-# End time: 16:47:46 on May 27,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vsim 
-# Start time: 16:47:50 on May 27,2019
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# 
-# Loading work.tb_Tx(fast)
-# Loading work.Tx(fast)
-# Loading work.chirpRom(fast)
-# Loading xilinxcorelib_ver.BLK_MEM_GEN_V7_3(fast)
-# Loading xilinxcorelib_ver.BLK_MEM_GEN_V7_3_mem_module(fast)
-# Loading xilinxcorelib_ver.BLK_MEM_GEN_V7_3_output_stage(fast)
-# Loading xilinxcorelib_ver.BLK_MEM_GEN_V7_3_softecc_output_reg_stage(fast)
+# Loading work.tb_Ctrl(fast)
+# Loading work.Ctrl(fast)
 # Loading work.glbl(fast)
 # .main_pane.wave.interior.cs.body.pw.wf
 # .main_pane.structure.interior.cs.body.struct
 # .main_pane.objects.interior.cs.body.tree
-#  Block Memory Generator CORE Generator module loading initial data...
-#  Block Memory Generator data initialization complete.
-# Block Memory Generator CORE Generator module tb_Tx.uut.MyChirp.inst.native_mem_module.blk_mem_gen_v7_3_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
 run
-# Causality operation skipped due to absence of debug database file
-# End time: 16:56:07 on May 27,2019, Elapsed time: 0:08:17
-# Errors: 0, Warnings: 1
+run
+do {tb_Ctrl.fdo}
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+# Start time: 10:19:44 on May 28,2019
+# vlog -reportprogress 300 design/Ctrl.v 
+# -- Compiling module Ctrl
+# 
+# Top level modules:
+# 	Ctrl
+# End time: 10:19:44 on May 28,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+# Start time: 10:19:44 on May 28,2019
+# vlog -reportprogress 300 sim/tb_Ctrl.v 
+# -- Compiling module tb_Ctrl
+# 
+# Top level modules:
+# 	tb_Ctrl
+# End time: 10:19:44 on May 28,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+# Start time: 10:19:44 on May 28,2019
+# vlog -reportprogress 300 D:/Xilinx/Xilinx14.7/14.7/ISE_DS/ISE/verilog/src/glbl.v 
+# -- Compiling module glbl
+# 
+# Top level modules:
+# 	glbl
+# End time: 10:19:44 on May 28,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 10:19:46 on May 28,2019
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# 
+# ** Note: (vopt-143) Recognized 1 FSM in module "Ctrl(fast)".
+# 
+# Loading work.tb_Ctrl(fast)
+# Loading work.Ctrl(fast)
+# Loading work.glbl(fast)
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+do {tb_Ctrl.fdo}
+# ** Warning: (vlib-34) Library already exists at "work".
+# 
+# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+# Start time: 10:21:09 on May 28,2019
+# vlog -reportprogress 300 design/Ctrl.v 
+# -- Compiling module Ctrl
+# 
+# Top level modules:
+# 	Ctrl
+# End time: 10:21:09 on May 28,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+# Start time: 10:21:09 on May 28,2019
+# vlog -reportprogress 300 sim/tb_Ctrl.v 
+# -- Compiling module tb_Ctrl
+# 
+# Top level modules:
+# 	tb_Ctrl
+# End time: 10:21:09 on May 28,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
+# Start time: 10:21:09 on May 28,2019
+# vlog -reportprogress 300 D:/Xilinx/Xilinx14.7/14.7/ISE_DS/ISE/verilog/src/glbl.v 
+# -- Compiling module glbl
+# 
+# Top level modules:
+# 	glbl
+# End time: 10:21:09 on May 28,2019, Elapsed time: 0:00:00
+# Errors: 0, Warnings: 0
+# vsim 
+# Start time: 10:21:12 on May 28,2019
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# 
+# ** Note: (vopt-143) Recognized 1 FSM in module "Ctrl(fast)".
+# 
+# Loading work.tb_Ctrl(fast)
+# Loading work.Ctrl(fast)
+# Loading work.glbl(fast)
+# .main_pane.wave.interior.cs.body.pw.wf
+# .main_pane.structure.interior.cs.body.struct
+# .main_pane.objects.interior.cs.body.tree
+# End time: 10:23:38 on May 28,2019, Elapsed time: 0:02:26
+# Errors: 0, Warnings: 0
