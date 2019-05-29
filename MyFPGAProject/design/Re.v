@@ -19,6 +19,14 @@
 //
 //////////////////////////////////////////////////////////////////////////////////
 module Re(
+	 input clk,
+	 input rst_n,
+	 
+	 //Internet Ctrl
+	 
+	 
+	 //Re Ctrl
+	 input [7:0] addata        //AD data
     );
 
 

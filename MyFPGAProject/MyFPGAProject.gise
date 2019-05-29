@@ -39,6 +39,7 @@
       <status xil_pn:value="ReadyToRun"/>
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputAdded"/>
       <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="design/Ctrl.v"/>
@@ -59,6 +60,8 @@
     <transform xil_pn:end_ts="1559009815" xil_pn:in_ck="-7227798729560758926" xil_pn:name="TRAN_regenerateCoresSim" xil_pn:prop_ck="-7882940287800717258" xil_pn:start_ts="1559009815">
       <status xil_pn:value="SuccessfullyRun"/>
       <status xil_pn:value="ReadyToRun"/>
+      <status xil_pn:value="OutOfDateForInputs"/>
+      <status xil_pn:value="InputAdded"/>
       <outfile xil_pn:name="ip/pllClock.v"/>
       <outfile xil_pn:name="ipcore_dir/chirpRom/chirpRom.ngc"/>
       <outfile xil_pn:name="ipcore_dir/chirpRom/chirpRom.v"/>
@@ -86,6 +89,7 @@
       <status xil_pn:value="OutOfDateForInputs"/>
       <status xil_pn:value="OutOfDateForPredecessor"/>
       <status xil_pn:value="OutOfDateForOutputs"/>
+      <status xil_pn:value="InputAdded"/>
       <status xil_pn:value="InputChanged"/>
       <status xil_pn:value="OutputChanged"/>
       <outfile xil_pn:name="tb_Ctrl.fdo"/>
