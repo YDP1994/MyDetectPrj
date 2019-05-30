@@ -44,8 +44,7 @@ reg key_scan;
 			counter_for_key <= 20'd0;
 		else
 			begin
-//				if(counter_for_key == 20'd999_999)begin
-				if(counter_for_key == 20'd5)begin
+				if(counter_for_key == 20'd999_999)begin
 					counter_for_key <= 20'b0;
 					key_scan <= key_in;
 				end

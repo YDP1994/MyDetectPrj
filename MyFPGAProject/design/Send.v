@@ -23,20 +23,23 @@ module Send(
 				  output reg         txen,                  //GMII数据使能信号
 				  output reg         txer,                  //GMII发送错误信号
 				  output reg [7:0]   dataout,               //GMII发送数据
+
 				  input      [31:0]  crc,                   //CRC32校验码
-				  input      [31:0]  datain,                //RAM中的数据	 
 				  output reg         crcen,                 //CRC32 校验使能
 				  output reg         crcre,                 //CRC32 校验清除
-
+				  
+				  input      [7:0]   datain,                //FIFO中的数据	 
+			     input      [10:0]  fifo_data_count,		  //FIFO中的数据数量
+		        output reg         fifo_rd_en,            //FIFO读使能 
+				  
 				  output reg [3:0]   tx_state,              //发送状态机    
 				  input      [15:0]  tx_data_length,        //发送的数据包的长度
-				  input      [15:0]  tx_total_length,       //发送包的长度
-				  output reg [8:0]   ram_rd_addr            //ram读地址
+				  input      [15:0]  tx_total_length        //发送包的长度
+
 				  
 	  );
 
 
-reg [31:0]  datain_reg;
 
 reg [31:0] ip_header [6:0];                  //数据段为1K
 
@@ -45,7 +48,6 @@ reg [7:0] mac_addr [13:0];                   //mac address
 reg [4:0] i,j;
 
 reg [31:0] check_buffer;
-reg [31:0] time_counter;
 reg [15:0] tx_data_counter;
 
 parameter idle=4'b0000,start=4'b0001,make=4'b0010,send55=4'b0011,sendmac=4'b0100,sendheader=4'b0101,
@@ -91,17 +93,15 @@ begin
 				 txer<=1'b0;
 				 txen<=1'b0;
 				 crcen<=1'b0;
+             fifo_rd_en<=1'b0;  				 
 				 crcre<=1;
 				 j<=0;
 				 dataout<=0;
-				 ram_rd_addr<=1;
 				 tx_data_counter<=0;
-             if (time_counter==32'h10) begin     //等待延迟, 每隔一段时间发送一个数据包，值越小，包发送之间的间隔越小
+             if (fifo_data_count>=11'd1000)     //如果FIFO中的数据大于1000
 				     tx_state<=start;  
-                 time_counter<=0;
-             end
              else
-                 time_counter<=time_counter+1'b1;				
+				     tx_state<=idle;  			
 			end
 		   start:begin        //IP header
 					ip_header[0]<={16'h4500,tx_total_length};        //版本号：4； 包头长度：20；IP包总长
@@ -130,7 +130,7 @@ begin
 					   tx_state<=send55;
 					end
 		   end
-			send55: begin                    //发送8个IP前导码:7个55, 1个d5                    
+			send55: begin                               //发送8个IP前导码:7个55, 1个d5                    
  				 txen<=1'b1;                             //GMII数据发送有效
 				 crcre<=1'b1;                            //reset crc  
 				 if(i==7) begin
@@ -157,7 +157,6 @@ begin
 				 end
 			end
 			sendheader: begin                        //发送7个32bit的IP 包头
-				datain_reg<=datain;                   //准备需要发送的数据	
 			   if(j==6) begin                        //发送ip_header[6]                   
 					  if(i==0) begin
 						 dataout[7:0]<=ip_header[j][31:24];
@@ -175,7 +174,8 @@ begin
 						 dataout[7:0]<=ip_header[j][7:0];
 						 i<=0;
 						 j<=0;
-						 tx_state<=senddata;			 
+						 tx_state<=senddata;
+                   fifo_rd_en<=1'b1;                    //读FIFO数据有效						 
 					  end
 					  else
 						 txer<=1'b1;
@@ -205,44 +205,12 @@ begin
 			 senddata:begin                                      //发送UDP数据包
 			   if(tx_data_counter==tx_data_length-9) begin       //判断是否是发送最后的数据(真正的数据包长度是tx_data_length-8）
 				   tx_state<=sendcrc;	                          //发送最后一个字节,状态转到sendcrc
-					if(i==0) begin    
-					  dataout[7:0]<=datain_reg[31:24];
-					  i<=0;
-					end
-					else if(i==1) begin
-					  dataout[7:0]<=datain_reg[23:16];
-					  i<=0;
-					end
-					else if(i==2) begin
-					  dataout[7:0]<=datain_reg[15:8];
-					  i<=0;
-					end
-					else if(i==3) begin
-			        dataout[7:0]<=datain_reg[7:0];
-					  datain_reg<=datain;                       //提前准备数据
-					  i<=0;
-					end
+ 		         dataout<=datain;	
             end
-            else begin                                     //发送其它的数据包(第一个字节到倒数第二个字节）
+            else begin                                       //发送其它的数据包(第一个字节到倒数第二个字节）
                tx_data_counter<=tx_data_counter+1'b1;			
-					if(i==0) begin    
-					  dataout[7:0]<=datain_reg[31:24];	       //发送高8位(31：24）数据
-					  i<=i+1'b1;
-					  ram_rd_addr<=ram_rd_addr+1'b1;           //RAM地址加1, 提前让RAM输出数据	
-					end
-					else if(i==1) begin
-					  dataout[7:0]<=datain_reg[23:16];         //发送次高8位(23：16）数据
-					  i<=i+1'b1;
-					end
-					else if(i==2) begin
-					  dataout[7:0]<=datain_reg[15:8];          //发送次低8位(15：8）数据
-					  i<=i+1'b1;
-					end
-					else if(i==3) begin
-			        dataout[7:0]<=datain_reg[7:0];           //发送低8位(7：0）数据
-					  datain_reg<=datain;                      //准备数据					  
-					  i<=0; 				  
-					end
+				   tx_state<=tx_state;	                         //发送最后一个字节,状态转到sendcrc
+ 		         dataout<=datain;
 				end
 			end	
 			sendcrc: begin                              //发送32位的crc校验
@@ -274,4 +242,6 @@ begin
        endcase	  
  end
 endmodule
+
+
 
