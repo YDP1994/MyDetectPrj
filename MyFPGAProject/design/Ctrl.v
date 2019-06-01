@@ -36,15 +36,9 @@ module Ctrl(
 	 output reg enRe,
 	 
 	 //RST Ctrl
-	 output reg fifo_rst,
-
-	 output reg key_state,
-	 output reg [3:0] current_state,
-	 output reg [3:0] next_state,
+	 output reg fifo_rst
 	 
-	 output reg [9:0]counter_for_rst,
-	 output reg rst_flag,
-	 output reg overRST
+
     );
 
 //Key Ctrl Code
@@ -56,8 +50,8 @@ reg key_scan;
 			counter_for_key <= 20'd0;
 		else
 			begin
-//				if(counter_for_key == 20'd999_999)begin
-				if(counter_for_key == 20'd5)begin
+				if(counter_for_key == 20'd999_999)begin	//实际运行时，需要把换成这段程序
+//				if(counter_for_key == 20'd5)begin	//仿真时，需要把换成这段程序
 					counter_for_key <= 20'd0;
 					key_scan <= key_in;
 				end
@@ -73,7 +67,7 @@ reg key_scan_r;
 wire flag_key = key_scan_r & (!key_scan);
 
 //	Process-Control
-//reg key_state;			//1:on	0:off
+reg key_state;			//1:on	0:off
 	always@(posedge clk_100 or negedge rst_n)
 	begin
 		if(!rst_n) begin
@@ -93,9 +87,9 @@ parameter RST = 4'b0010;
 parameter TX = 4'b0100; 
 parameter RE = 4'b1000; 
 
-//reg [3:0] current_state, next_state; // 现态、次态
-//reg rst_flag;
-//reg overRST;
+reg [3:0] current_state, next_state; // 现态、次态
+reg rst_flag;
+reg overRST;
 
 	always@(posedge clk_100 or negedge rst_n)
 	begin
@@ -211,7 +205,7 @@ parameter RE = 4'b1000;
 	end
 
 //RST状态下的计数器
-//reg [9:0]counter_for_rst;
+reg [9:0]counter_for_rst;
 	always@(posedge clk_100 or negedge rst_n)
 	begin
 		if(!rst_n) begin

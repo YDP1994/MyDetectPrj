@@ -3,13 +3,13 @@ Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
 --> Parameter TMPDIR set to xst/projnav.tmp
 
 
-Total REAL time to Xst completion: 1.00 secs
+Total REAL time to Xst completion: 0.00 secs
 Total CPU time to Xst completion: 0.12 secs
  
 --> Parameter xsthdpdir set to xst
 
 
-Total REAL time to Xst completion: 1.00 secs
+Total REAL time to Xst completion: 0.00 secs
 Total CPU time to Xst completion: 0.12 secs
  
 --> Reading design: Top.prj
@@ -146,8 +146,8 @@ Elaborating module <Re>.
 
 Elaborating module <myFIFO>.
 WARNING:HDLCompiler:1499 - "E:\MyTangCeProject\MyFPGAProject\ipcore_dir\Fifo\myFIFO.v" Line 39: Empty module <myFIFO> remains a black box.
-WARNING:HDLCompiler:1127 - "E:\MyTangCeProject\MyFPGAProject\design\Re.v" Line 78: Assignment to fifo_full ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "E:\MyTangCeProject\MyFPGAProject\design\Re.v" Line 79: Assignment to fifo_empty ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "E:\MyTangCeProject\MyFPGAProject\design\Re.v" Line 80: Assignment to fifo_full ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "E:\MyTangCeProject\MyFPGAProject\design\Re.v" Line 81: Assignment to fifo_empty ignored, since the identifier is never used
 
 Elaborating module <udpSend>.
 
@@ -155,7 +155,6 @@ Elaborating module <Send>.
 
 Elaborating module <crc>.
 WARNING:HDLCompiler:1127 - "E:\MyTangCeProject\MyFPGAProject\design\udpSend.v" Line 73: Assignment to crcnext ignored, since the identifier is never used
-WARNING:HDLCompiler:552 - "E:\MyTangCeProject\MyFPGAProject\design\Re.v" Line 65: Input port rst is not connected on this instance
 
 Elaborating module <pllClock>.
 
@@ -165,6 +164,7 @@ Elaborating module <DCM_SP(CLKDV_DIVIDE=2.0,CLKFX_DIVIDE=25,CLKFX_MULTIPLY=16,CL
 WARNING:HDLCompiler:1127 - "E:\MyTangCeProject\MyFPGAProject\ip\pllClock.v" Line 135: Assignment to status_int ignored, since the identifier is never used
 
 Elaborating module <BUFG>.
+WARNING:HDLCompiler:1127 - "E:\MyTangCeProject\MyFPGAProject\design\Top.v" Line 124: Assignment to clk_50 ignored, since the identifier is never used
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -172,8 +172,8 @@ Elaborating module <BUFG>.
 
 Synthesizing Unit <Top>.
     Related source file is "E:\MyTangCeProject\MyFPGAProject\design\Top.v".
-WARNING:Xst:647 - Input <e_txc> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
-INFO:Xst:3210 - "E:\MyTangCeProject\MyFPGAProject\design\Top.v" line 116: Output port <LOCKED> of the instance <pllClock_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\MyTangCeProject\MyFPGAProject\design\Top.v" line 119: Output port <CLK_OUT2> of the instance <pllClock_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\MyTangCeProject\MyFPGAProject\design\Top.v" line 119: Output port <LOCKED> of the instance <pllClock_inst> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
 Unit <Top> synthesized.
@@ -191,46 +191,60 @@ Unit <Tx> synthesized.
 
 Synthesizing Unit <Ctrl>.
     Related source file is "E:\MyTangCeProject\MyFPGAProject\design\Ctrl.v".
-        NO_KEY_PRESSED = 3'b001
-        TX = 3'b010
-        RE = 3'b100
+        NO_KEY_PRESSED = 4'b0001
+        RST = 4'b0010
+        TX = 4'b0100
+        RE = 4'b1000
     Found 1-bit register for signal <temp_led>.
-    Found 3-bit register for signal <current_state>.
+    Found 4-bit register for signal <current_state>.
+    Found 10-bit register for signal <counter_for_rst>.
     Found 20-bit register for signal <counter_for_key>.
     Found 1-bit register for signal <key_state>.
     Found 1-bit register for signal <enTx>.
     Found 1-bit register for signal <enRe>.
     Found 1-bit register for signal <beginSignal>.
+    Found 1-bit register for signal <rst_flag>.
+    Found 1-bit register for signal <fifo_rst>.
+    Found 1-bit register for signal <overRST>.
     Found 1-bit register for signal <key_scan>.
     Found 1-bit register for signal <key_scan_r>.
     Found finite state machine <FSM_0> for signal <current_state>.
     -----------------------------------------------------------------------
-    | States             | 3                                              |
-    | Transitions        | 6                                              |
-    | Inputs             | 4                                              |
-    | Outputs            | 6                                              |
+    | States             | 4                                              |
+    | Transitions        | 11                                             |
+    | Inputs             | 5                                              |
+    | Outputs            | 7                                              |
     | Clock              | clk_100 (rising_edge)                          |
     | Reset              | rst_n (negative)                               |
     | Reset type         | asynchronous                                   |
-    | Reset State        | 001                                            |
+    | Reset State        | 0001                                           |
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 20-bit adder for signal <counter_for_key[19]_GND_4_o_add_1_OUT> created at line 53.
+    Found 20-bit adder for signal <counter_for_key[19]_GND_4_o_add_1_OUT> created at line 58.
+    Found 10-bit adder for signal <counter_for_rst[9]_GND_4_o_add_32_OUT> created at line 225.
+    Found 10-bit comparator greater for signal <GND_4_o_counter_for_rst[9]_LessThan_30_o> created at line 220
+    Found 10-bit comparator greater for signal <counter_for_rst[9]_GND_4_o_LessThan_31_o> created at line 220
     Summary:
-	inferred   1 Adder/Subtractor(s).
-	inferred  27 D-type flip-flop(s).
-	inferred   1 Multiplexer(s).
+	inferred   2 Adder/Subtractor(s).
+	inferred  40 D-type flip-flop(s).
+	inferred   2 Comparator(s).
+	inferred   4 Multiplexer(s).
 	inferred   1 Finite State Machine(s).
 Unit <Ctrl> synthesized.
 
 Synthesizing Unit <Re>.
     Related source file is "E:\MyTangCeProject\MyFPGAProject\design\Re.v".
-INFO:Xst:3210 - "E:\MyTangCeProject\MyFPGAProject\design\Re.v" line 65: Output port <full> of the instance <myFIFO_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\MyTangCeProject\MyFPGAProject\design\Re.v" line 65: Output port <empty> of the instance <myFIFO_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\MyTangCeProject\MyFPGAProject\design\Re.v" line 67: Output port <full> of the instance <myFIFO_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\MyTangCeProject\MyFPGAProject\design\Re.v" line 67: Output port <empty> of the instance <myFIFO_inst> is unconnected or connected to loadless signal.
+    Found 20-bit register for signal <counter_for_key>.
+    Found 1-bit register for signal <overRe>.
     Found 8-bit register for signal <ad_data>.
+    Found 20-bit adder for signal <counter_for_key[19]_GND_6_o_add_5_OUT> created at line 116.
     Summary:
-	inferred   8 D-type flip-flop(s).
+	inferred   1 Adder/Subtractor(s).
+	inferred  29 D-type flip-flop(s).
+	inferred   3 Multiplexer(s).
 Unit <Re> synthesized.
 
 Synthesizing Unit <udpSend>.
@@ -361,12 +375,13 @@ Macro Statistics
 # RAMs                                                 : 2
  14x8-bit single-port Read Only RAM                    : 1
  8x8-bit single-port Read Only RAM                     : 1
-# Adders/Subtractors                                   : 16
+# Adders/Subtractors                                   : 18
+ 10-bit adder                                          : 1
  16-bit adder                                          : 3
  17-bit adder                                          : 1
  18-bit adder                                          : 1
  19-bit adder                                          : 1
- 20-bit adder                                          : 2
+ 20-bit adder                                          : 3
  21-bit adder                                          : 1
  22-bit adder                                          : 1
  23-bit adder                                          : 1
@@ -374,21 +389,24 @@ Macro Statistics
  25-bit adder                                          : 1
  5-bit adder                                           : 2
  9-bit adder                                           : 1
-# Registers                                            : 24
- 1-bit register                                        : 13
+# Registers                                            : 30
+ 1-bit register                                        : 17
+ 10-bit register                                       : 1
  16-bit register                                       : 3
- 20-bit register                                       : 1
+ 20-bit register                                       : 2
  224-bit register                                      : 1
  32-bit register                                       : 1
  5-bit register                                        : 2
  8-bit register                                        : 2
  9-bit register                                        : 1
-# Comparators                                          : 1
+# Comparators                                          : 3
+ 10-bit comparator greater                             : 2
  11-bit comparator greater                             : 1
-# Multiplexers                                         : 47
- 1-bit 2-to-1 multiplexer                              : 21
+# Multiplexers                                         : 53
+ 1-bit 2-to-1 multiplexer                              : 23
+ 10-bit 2-to-1 multiplexer                             : 2
  16-bit 2-to-1 multiplexer                             : 1
- 20-bit 2-to-1 multiplexer                             : 1
+ 20-bit 2-to-1 multiplexer                             : 3
  32-bit 2-to-1 multiplexer                             : 2
  5-bit 2-to-1 multiplexer                              : 9
  8-bit 2-to-1 multiplexer                              : 5
@@ -604,8 +622,10 @@ Macro Statistics
 # RAMs                                                 : 2
  14x8-bit single-port distributed Read Only RAM        : 1
  8x8-bit single-port distributed Read Only RAM         : 1
-# Adders/Subtractors                                   : 5
+# Adders/Subtractors                                   : 7
+ 10-bit adder                                          : 1
  16-bit adder                                          : 2
+ 20-bit adder                                          : 1
  5-bit adder                                           : 2
  9-bit adder                                           : 1
 # Adder Trees                                          : 1
@@ -613,13 +633,16 @@ Macro Statistics
 # Counters                                             : 2
  16-bit up counter                                     : 1
  20-bit up counter                                     : 1
-# Registers                                            : 336
- Flip-Flops                                            : 336
-# Comparators                                          : 1
+# Registers                                            : 370
+ Flip-Flops                                            : 370
+# Comparators                                          : 3
+ 10-bit comparator greater                             : 2
  11-bit comparator greater                             : 1
-# Multiplexers                                         : 73
- 1-bit 2-to-1 multiplexer                              : 21
+# Multiplexers                                         : 79
+ 1-bit 2-to-1 multiplexer                              : 23
  1-bit 7-to-1 multiplexer                              : 32
+ 10-bit 2-to-1 multiplexer                             : 2
+ 20-bit 2-to-1 multiplexer                             : 2
  32-bit 2-to-1 multiplexer                             : 2
  5-bit 2-to-1 multiplexer                              : 9
  8-bit 2-to-1 multiplexer                              : 5
@@ -804,16 +827,15 @@ Optimizing FSM <Re_inst/udpSend_inst/Send_inst/FSM_1> on signal <tx_state[1:3]> 
  0111  | 100
 -------------------
 Analyzing FSM <MFsm> for best encoding.
-Optimizing FSM <Ctrl_inst/FSM_0> on signal <current_state[1:2]> with sequential encoding.
+Optimizing FSM <Ctrl_inst/FSM_0> on signal <current_state[1:2]> with gray encoding.
 -------------------
  State | Encoding
 -------------------
- 001   | 00
- 010   | 01
- 100   | 10
+ 0001  | 00
+ 0010  | 01
+ 0100  | 11
+ 1000  | 10
 -------------------
-INFO:Xst:2261 - The FF/Latch <enRe> in Unit <Ctrl> is equivalent to the following FF/Latch, which will be removed : <current_state_FSM_FFd1> 
-INFO:Xst:2261 - The FF/Latch <enTx> in Unit <Ctrl> is equivalent to the following FF/Latch, which will be removed : <current_state_FSM_FFd2> 
 
 Optimizing unit <Top> ...
 
@@ -879,6 +901,7 @@ Optimizing unit <crc> ...
 Optimizing unit <Tx> ...
 
 Optimizing unit <Ctrl> ...
+INFO:Xst:2261 - The FF/Latch <beginSignal> in Unit <Ctrl> is equivalent to the following FF/Latch, which will be removed : <current_state_FSM_FFd1> 
 WARNING:Xst:1710 - FF/Latch <Re_inst/udpSend_inst/Send_inst/check_buffer_18> (without init value) has a constant value of 0 in block <Top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Re_inst/udpSend_inst/Send_inst/j_4> (without init value) has a constant value of 0 in block <Top>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <Re_inst/udpSend_inst/Send_inst/j_3> (without init value) has a constant value of 0 in block <Top>. This FF/Latch will be trimmed during the optimization process.
@@ -887,7 +910,7 @@ INFO:Xst:3203 - The FF/Latch <Ctrl_inst/key_state> in Unit <Top> is the opposite
 
 Mapping all equations...
 Building and optimizing final netlist ...
-Found area constraint ratio of 100 (+ 5) on block Top, actual ratio is 6.
+Found area constraint ratio of 100 (+ 5) on block Top, actual ratio is 7.
 INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i> in Unit <Re_inst/myFIFO_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_fb_i> 
 INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_1> in Unit <Re_inst/myFIFO_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_0> 
 INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <Re_inst/myFIFO_inst> is equivalent to the following 2 FFs/Latches : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_1> <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
@@ -896,6 +919,7 @@ INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_
 INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_1> in Unit <Re_inst/myFIFO_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.wr_rst_reg_0> 
 INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_2> in Unit <Re_inst/myFIFO_inst> is equivalent to the following 2 FFs/Latches : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_1> <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/rstblk/ngwrdrst.grst.rd_rst_reg_0> 
 INFO:Xst:2260 - The FF/Latch <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i> in Unit <Re_inst/myFIFO_inst> is equivalent to the following FF/Latch : <U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_fb_i> 
+FlipFlop Ctrl_inst/beginSignal has been replicated 1 time(s)
 
 Final Macro Processing ...
 
@@ -903,8 +927,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 165
- Flip-Flops                                            : 165
+# Registers                                            : 201
+ Flip-Flops                                            : 201
 
 =========================================================================
 
@@ -927,23 +951,23 @@ Top Level Output File Name         : Top.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 772
+# BELS                             : 885
 #      GND                         : 4
-#      INV                         : 13
-#      LUT1                        : 57
+#      INV                         : 14
+#      LUT1                        : 76
 #      LUT2                        : 92
-#      LUT3                        : 52
-#      LUT4                        : 88
-#      LUT5                        : 60
-#      LUT6                        : 139
-#      MUXCY                       : 137
-#      MUXF7                       : 6
+#      LUT3                        : 75
+#      LUT4                        : 93
+#      LUT5                        : 69
+#      LUT6                        : 153
+#      MUXCY                       : 156
+#      MUXF7                       : 9
 #      VCC                         : 3
-#      XORCY                       : 121
-# FlipFlops/Latches                : 334
+#      XORCY                       : 141
+# FlipFlops/Latches                : 370
 #      FD                          : 14
 #      FD_1                        : 25
-#      FDC                         : 134
+#      FDC                         : 170
 #      FDCE                        : 49
 #      FDE                         : 16
 #      FDE_1                       : 48
@@ -954,10 +978,10 @@ Primitive and Black Box Usage:
 #      RAMB8BWER                   : 1
 # Clock Buffers                    : 4
 #      BUFG                        : 4
-# IO Buffers                       : 43
+# IO Buffers                       : 36
 #      IBUF                        : 11
 #      IBUFG                       : 1
-#      OBUF                        : 31
+#      OBUF                        : 24
 # DCMs                             : 1
 #      DCM_SP                      : 1
 
@@ -968,20 +992,20 @@ Selected Device : 6slx16csg324-2
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             334  out of  18224     1%  
- Number of Slice LUTs:                  501  out of   9112     5%  
-    Number used as Logic:               501  out of   9112     5%  
+ Number of Slice Registers:             370  out of  18224     2%  
+ Number of Slice LUTs:                  572  out of   9112     6%  
+    Number used as Logic:               572  out of   9112     6%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    599
-   Number with an unused Flip Flop:     265  out of    599    44%  
-   Number with an unused LUT:            98  out of    599    16%  
-   Number of fully used LUT-FF pairs:   236  out of    599    39%  
+ Number of LUT Flip Flop pairs used:    671
+   Number with an unused Flip Flop:     301  out of    671    44%  
+   Number with an unused LUT:            99  out of    671    14%  
+   Number of fully used LUT-FF pairs:   271  out of    671    40%  
    Number of unique control sets:        24
 
 IO Utilization: 
- Number of IOs:                          47
- Number of bonded IOBs:                  43  out of    232    18%  
+ Number of IOs:                          38
+ Number of bonded IOBs:                  36  out of    232    15%  
 
 Specific Feature Utilization:
  Number of Block RAM/FIFO:                2  out of     32     6%  
@@ -1009,8 +1033,8 @@ Clock Information:
 -----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------+-------+
 Clock Signal                       | Clock buffer(FF name)                                                                                                                   | Load  |
 -----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------+-------+
+clk                                | DCM_SP:CLK2X                                                                                                                            | 73    |
 e_rxc                              | IBUF+BUFG                                                                                                                               | 206   |
-clk                                | DCM_SP:CLK2X                                                                                                                            | 37    |
 clk                                | DCM_SP:CLKFX                                                                                                                            | 94    |
 Tx_inst/MyChirp/N1                 | NONE(Tx_inst/MyChirp/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.SIMPLE_PRIM9.ram)| 1     |
 -----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------+-------+
@@ -1024,14 +1048,37 @@ Timing Summary:
 ---------------
 Speed Grade: -2
 
-   Minimum period: 53.360ns (Maximum Frequency: 18.741MHz)
-   Minimum input arrival time before clock: 4.601ns
+   Minimum period: 52.768ns (Maximum Frequency: 18.951MHz)
+   Minimum input arrival time before clock: 5.024ns
    Maximum output required time after clock: 5.393ns
    Maximum combinational path delay: 4.921ns
 
 Timing Details:
 ---------------
 All values displayed in nanoseconds (ns)
+
+=========================================================================
+Timing constraint: Default period analysis for Clock 'clk'
+  Clock period: 52.768ns (frequency: 18.951MHz)
+  Total number of paths / destination ports: 2129 / 297
+-------------------------------------------------------------------------
+Delay:               3.298ns (Levels of Logic = 2)
+  Source:            Ctrl_inst/beginSignal_1 (FF)
+  Destination:       Re_inst/myFIFO_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_d1_10 (FF)
+  Source Clock:      clk rising 2.0X
+  Destination Clock: clk rising 0.6X
+
+  Data Path: Ctrl_inst/beginSignal_1 to Re_inst/myFIFO_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_d1_10
+                                Gate     Net
+    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
+    ----------------------------------------  ------------
+     FDC:C->Q              4   0.525   0.912  Ctrl_inst/beginSignal_1 (Ctrl_inst/beginSignal_1)
+     begin scope: 'Re_inst/myFIFO_inst:wr_en'
+     LUT2:I0->O           21   0.250   1.309  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/ram_wr_en_i1 (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/ram_wr_en)
+     FDPE:CE                   0.302          U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_1
+    ----------------------------------------
+    Total                      3.298ns (1.077ns logic, 2.221ns route)
+                                       (32.7% logic, 67.3% route)
 
 =========================================================================
 Timing constraint: Default period analysis for Clock 'e_rxc'
@@ -1058,51 +1105,28 @@ Delay:               4.414ns (Levels of Logic = 3)
                                        (30.7% logic, 69.3% route)
 
 =========================================================================
-Timing constraint: Default period analysis for Clock 'clk'
-  Clock period: 53.360ns (frequency: 18.741MHz)
-  Total number of paths / destination ports: 1178 / 256
--------------------------------------------------------------------------
-Delay:               3.335ns (Levels of Logic = 2)
-  Source:            Ctrl_inst/beginSignal (FF)
-  Destination:       Re_inst/myFIFO_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_d1_10 (FF)
-  Source Clock:      clk rising 2.0X
-  Destination Clock: clk rising 0.6X
-
-  Data Path: Ctrl_inst/beginSignal to Re_inst/myFIFO_inst/U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_d1_10
-                                Gate     Net
-    Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
-    ----------------------------------------  ------------
-     FDC:C->Q              5   0.525   0.949  Ctrl_inst/beginSignal (Ctrl_inst/beginSignal)
-     begin scope: 'Re_inst/myFIFO_inst:wr_en'
-     LUT2:I0->O           21   0.250   1.309  U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/ram_wr_en_i1 (U0/xst_fifo_generator/gconvfifo.rf/grf.rf/ram_wr_en)
-     FDPE:CE                   0.302          U0/xst_fifo_generator/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/wpntr/gic0.gc0.count_1
-    ----------------------------------------
-    Total                      3.335ns (1.077ns logic, 2.258ns route)
-                                       (32.3% logic, 67.7% route)
-
-=========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 52 / 43
+  Total number of paths / destination ports: 88 / 79
 -------------------------------------------------------------------------
-Offset:              4.601ns (Levels of Logic = 2)
+Offset:              5.024ns (Levels of Logic = 2)
   Source:            rst_n (PAD)
-  Destination:       Tx_inst/rom_addr_8 (FF)
+  Destination:       Re_inst/counter_for_key_19 (FF)
   Destination Clock: clk rising 2.0X
 
-  Data Path: rst_n to Tx_inst/rom_addr_8
+  Data Path: rst_n to Re_inst/counter_for_key_19
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
      IBUF:I->O            10   1.328   1.007  rst_n_IBUF (rst_n_IBUF)
-     INV:I->O             34   0.255   1.552  Tx_inst/rst_n_inv1_INV_0 (Ctrl_inst/rst_n_inv)
+     INV:I->O             70   0.255   1.975  Re_inst/rst_n_inv1_INV_0 (Ctrl_inst/rst_n_inv)
      FDC:CLR                   0.459          Ctrl_inst/beginSignal
     ----------------------------------------
-    Total                      4.601ns (2.042ns logic, 2.559ns route)
-                                       (44.4% logic, 55.6% route)
+    Total                      5.024ns (2.042ns logic, 2.982ns route)
+                                       (40.6% logic, 59.4% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
-  Total number of paths / destination ports: 13 / 13
+  Total number of paths / destination ports: 10 / 10
 -------------------------------------------------------------------------
 Offset:              5.393ns (Levels of Logic = 2)
   Source:            Tx_inst/MyChirp/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.SIMPLE_PRIM9.ram (RAM)
@@ -1167,7 +1191,7 @@ Clock to Setup on destination clock clk
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    4.847|         |         |         |
+clk            |    7.273|         |         |         |
 e_rxc          |    1.280|         |         |         |
 ---------------+---------+---------+---------+---------+
 
@@ -1176,21 +1200,21 @@ Clock to Setup on destination clock e_rxc
                | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
 Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
 ---------------+---------+---------+---------+---------+
-clk            |    1.280|         |         |         |
+clk            |    1.893|         |         |         |
 e_rxc          |    3.873|    3.719|    7.534|         |
 ---------------+---------+---------+---------+---------+
 
 =========================================================================
 
 
-Total REAL time to Xst completion: 7.00 secs
-Total CPU time to Xst completion: 6.43 secs
+Total REAL time to Xst completion: 8.00 secs
+Total CPU time to Xst completion: 8.26 secs
  
 --> 
 
-Total memory usage is 252728 kilobytes
+Total memory usage is 252664 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  372 (   0 filtered)
+Number of warnings :  371 (   0 filtered)
 Number of infos    :   19 (   0 filtered)
 

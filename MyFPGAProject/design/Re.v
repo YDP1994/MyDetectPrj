@@ -25,9 +25,7 @@ module Re(
 	 
 	 //Internet Ctrl
 	 output e_reset,	
-            
-	 input  e_rxc,                      //125Mhz ethernet gmii rx clock\
-    
+	 input  e_rxc,                      //125Mhz ethernet gmii rx clock
 	 output e_gtxc,                     //25Mhz ethernet gmii tx clock  
 	 output e_txen,                     //GMII 发送数据有效信号	
 	 output e_txer,                     //GMII 发送数据错误信号					
@@ -40,7 +38,7 @@ module Re(
 	 input  [7:0] addata,        //AD data
 	 output reg overRe,
 	 
-	 output [10 : 0]fifo_data_count,
+	 //RST
 	 input fifo_rst
     );
 
@@ -61,7 +59,7 @@ begin
 end
 
 	//////////////////// DAC FIFO/////////////////// 
-//wire [10 : 0] fifo_data_count;
+wire [10 : 0] fifo_data_count;
 wire [7:0] fifo_data;
 wire fifo_rd_en;
 wire fifo_full;

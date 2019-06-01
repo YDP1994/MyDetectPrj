@@ -43,22 +43,7 @@ module tb_top;
 	wire e_txen;
 	wire e_txer;
 	wire [7:0] e_txd;
-	wire enTx;
-	wire overTx;
-	wire enRe;
-	wire overRe;
-	wire beginSignal;
-	wire clk_32;
-	wire clk_50;
-	wire clk_100;
-	wire [10 : 0]fifo_data_count;
-	wire fifo_rst;
-	wire [9:0]counter_for_rst;
-	wire rst_flag;
-	wire overRST;
-	wire key_state;
-	wire [3:0]current_state;
-	wire [3:0]next_state;
+	
 	// Bidirs
 	wire e_mdio;
 
@@ -81,25 +66,7 @@ module tb_top;
 		.e_gtxc(e_gtxc), 
 		.e_txen(e_txen), 
 		.e_txer(e_txer), 
-		.e_txd(e_txd), 
-		
-		.enTx(enTx), 
-		.overTx(overTx), 
-		.enRe(enRe), 
-		.overRe(overRe), 
-		.beginSignal(beginSignal), 
-		.clk_32(clk_32), 
-		.clk_50(clk_50), 
-		.clk_100(clk_100),
-		
-		.fifo_data_count(fifo_data_count),
-		.fifo_rst(fifo_rst),
-		.key_state(key_state),
-		.current_state(current_state),
-		.next_state(next_state),
-		.counter_for_rst(counter_for_rst),
-		 .rst_flag(rst_flag),
-		 .overRST(overRST)
+		.e_txd(e_txd)
 	);
 
 	initial begin
