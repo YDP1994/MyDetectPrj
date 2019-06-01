@@ -1,0 +1,16 @@
+
+
+
+// Instantiate the module
+Ctrl instance_name (
+    .clk_100(clk_100), 
+    .rst_n(rst_n), 
+    .key_in(key_in), 
+    .temp_led(temp_led), 
+    .overTx(overTx), 
+    .enTx(enTx), 
+    .overRe(overRe), 
+    .enRe(enRe)
+    );
+
+

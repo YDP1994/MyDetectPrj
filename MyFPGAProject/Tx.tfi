@@ -1,0 +1,13 @@
+
+
+
+// Instantiate the module
+Tx instance_name (
+    .clk_100(clk_100), 
+    .rst_n(rst_n), 
+    .enTx(enTx), 
+    .overTx(overTx), 
+    .dadata(dadata)
+    );
+
+

@@ -9,146 +9,323 @@ z2
 cModel Technology
 Z0 dE:/MyTangCeProject/MyFPGAProject
 T_opt
-!s110 1558946870
-V^WeCaf;de_QfE^KRJ=X8f1
-04 5 4 work tb_Tx fast 0
-Z1 04 4 4 work glbl fast 0
-=1-6c4b9010bcbc-5ceba436-179-3a04
-Z2 o-quiet -auto_acc_if_foreign -work work -L xilinxcorelib_ver -L unisims_ver -L unimacro_ver -L secureip +acc
+Z1 !s110 1559302482
+V:IFVB<`df48mmQ0d>F<:h0
+04 7 4 work tb_Ctrl fast 0
+Z2 04 4 4 work glbl fast 0
+=1-6c4b9010bcbc-5cf11152-1ce-1d1c
+Z3 o-quiet -auto_acc_if_foreign -work work -L xilinxcorelib_ver -L unisims_ver -L unimacro_ver -L secureip +acc
 n@_opt
-Z3 OL;O;10.4;61
+Z4 OL;O;10.4;61
 R0
 T_opt1
-!s110 1559010073
-V4MU^`KCeUn:_^PfAm;9eO1
-04 7 4 work tb_Ctrl fast 0
-R1
-=1-6c4b9010bcbc-5cec9b18-3ae-9c0
+!s110 1559350737
+V]VM?>?@z5G4;^G3J:J7k;2
+Z5 04 6 4 work tb_top fast 0
 R2
-n@_opt1
+=1-6c4b9010bcbc-5cf1cdd1-d1-2840
 R3
+n@_opt1
+R4
+R0
+T_opt2
+!s110 1559292630
+VnP[aU[=@>eW=LSFHL1AHE0
+R5
+R2
+=1-6c4b9010bcbc-5cf0ead6-bd-2104
+R3
+n@_opt2
+R4
+R0
 vchirpRom
-Z4 !s110 1558946866
+Z6 !s110 1559352099
 !i10b 1
 !s100 8fR7MHj9HWHbdAIb3aPao3
 IcDb^`187>;jFoX^I;8:DD0
-Z5 VDg1SIo80bB@j0V0VzS_@n1
+Z7 VDg1SIo80bB@j0V0VzS_@n1
 R0
 w1558940301
 8ipcore_dir/chirpRom/chirpRom.v
 Fipcore_dir/chirpRom/chirpRom.v
-L0 39
-Z6 OL;L;10.4;61
+Z8 L0 39
+Z9 OL;L;10.4;61
 r1
 !s85 0
 31
-!s108 1558946866.702000
+!s108 1559352099.744000
 !s107 ipcore_dir/chirpRom/chirpRom.v|
 !s90 -reportprogress|300|ipcore_dir/chirpRom/chirpRom.v|
 !i113 0
-Z7 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
+Z10 o-L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 nchirp@rom
-vCtrl
-Z8 !s110 1559010069
-!i10b 1
-!s100 ]jiC06b81j=^]5Imn[oIi2
-IIILRf[fgbPgJh=Edez>;]2
-R5
-R0
-w1559010045
-8design/Ctrl.v
-Fdesign/Ctrl.v
-Z9 L0 21
+vcrc
 R6
+!i10b 1
+!s100 2gBYcE6ZnT0boc?Hah8Wc2
+I87BNB3;;QE0`>FiJabTRT3
+R7
+R0
+w1559094969
+8design/crc.v
+Fdesign/crc.v
+L0 3
+R9
 r1
 !s85 0
 31
-!s108 1559010069.672000
+!s108 1559352099.572000
+!s107 design/crc.v|
+!s90 -reportprogress|300|design/crc.v|
+!i113 0
+R10
+vCtrl
+Z11 !s110 1559352100
+!i10b 1
+!s100 OBTjk9>DGEG_8nn_n=FmG2
+Ia=JLoV?XPW7Uc3_hY<Vh]2
+R7
+R0
+w1559350728
+8design/Ctrl.v
+Fdesign/Ctrl.v
+Z12 L0 21
+R9
+r1
+!s85 0
+31
+!s108 1559352100.076000
 !s107 design/Ctrl.v|
 !s90 -reportprogress|300|design/Ctrl.v|
 !i113 0
-R7
+R10
 n@ctrl
 vglbl
-R8
+R11
 !i10b 1
 !s100 UlJ]9LUWO:ZWoRO62F9fW3
 I`FIRd0Mg=So1P]A;Vf8FG1
-R5
+R7
 R0
 w1381681120
 8D:/Xilinx/Xilinx14.7/14.7/ISE_DS/ISE/verilog/src/glbl.v
 FD:/Xilinx/Xilinx14.7/14.7/ISE_DS/ISE/verilog/src/glbl.v
 L0 5
-R6
+R9
 r1
 !s85 0
 31
-!s108 1559010069.902000
+!s108 1559352100.327000
 !s107 D:/Xilinx/Xilinx14.7/14.7/ISE_DS/ISE/verilog/src/glbl.v|
 !s90 -reportprogress|300|D:/Xilinx/Xilinx14.7/14.7/ISE_DS/ISE/verilog/src/glbl.v|
 !i113 0
+R10
+vmyFIFO
+R6
+!i10b 1
+!s100 HM9gm;n`FQAmdz=ideZEA1
+I]Wj2SI:^zbEOK?LMUz=OI2
 R7
-vtb_Ctrl
+R0
+w1559199013
+8ipcore_dir/Fifo/myFIFO.v
+Fipcore_dir/Fifo/myFIFO.v
 R8
+R9
+r1
+!s85 0
+31
+!s108 1559352099.655000
+!s107 ipcore_dir/Fifo/myFIFO.v|
+!s90 -reportprogress|300|ipcore_dir/Fifo/myFIFO.v|
+!i113 0
+R10
+nmy@f@i@f@o
+vpllClock
+R6
+!i10b 1
+!s100 0fE4S>DDD[CP?^67In=0L2
+IVGE>40JQ^dnm8?ZZFUBE>2
+R7
+R0
+w1558938216
+8ip/pllClock.v
+Fip/pllClock.v
+L0 70
+R9
+r1
+!s85 0
+31
+!s108 1559352099.350000
+!s107 ip/pllClock.v|
+!s90 -reportprogress|300|ip/pllClock.v|
+!i113 0
+R10
+npll@clock
+vRe
+R11
+!i10b 1
+!s100 Chz^idRk`d;h]Y47D]SAF1
+IRcOBOB?I=HI?B``nZgaHW3
+R7
+R0
+w1559350730
+8design/Re.v
+Fdesign/Re.v
+R12
+R9
+r1
+!s85 0
+31
+!s108 1559352099.993000
+!s107 design/Re.v|
+!s90 -reportprogress|300|design/Re.v|
+!i113 0
+R10
+n@re
+vSend
+R6
+!i10b 1
+!s100 kD^Y63cYKf>@^n`LH;a2h3
+Il0zZJ@e6oKnL7UWJe3W3K2
+R7
+R0
+w1559282923
+8design/Send.v
+Fdesign/Send.v
+R12
+R9
+r1
+!s85 0
+31
+!s108 1559352099.461000
+!s107 design/Send.v|
+!s90 -reportprogress|300|design/Send.v|
+!i113 0
+R10
+n@send
+vtb_Ctrl
+R1
 !i10b 1
 !s100 eeo5lncI[iT2hG7jRmR`;0
 I2BPYm=L8=MI>1J3WzmRjn2
-R5
+R7
 R0
 w1559010061
 8sim/tb_Ctrl.v
 Fsim/tb_Ctrl.v
-Z10 L0 25
-R6
+Z13 L0 25
+R9
 r1
 !s85 0
 31
-!s108 1559010069.792000
+!s108 1559302482.089000
 !s107 sim/tb_Ctrl.v|
 !s90 -reportprogress|300|sim/tb_Ctrl.v|
 !i113 0
-R7
-ntb_@ctrl
-vtb_Tx
-R4
-!i10b 1
-!s100 1YE5e7FHX1UZX^J<`HV]m1
-I7<IN:[1k]YBDhlj_jhj8Q1
-R5
-R0
-w1558946862
-8sim/tb_Tx.v
-Fsim/tb_Tx.v
 R10
-R6
+ntb_@ctrl
+vtb_top
+R11
+!i10b 1
+!s100 ol6JcYIg6C3IoEbf;D@QL3
+Ijk=@mJ2UoJ>gkgUX>Og@=0
+R7
+R0
+Z14 w1559349897
+8sim/tb_top.v
+Fsim/tb_top.v
+R13
+R9
 r1
 !s85 0
 31
-!s108 1558946866.906000
+!s108 1559352100.243000
+!s107 sim/tb_top.v|
+!s90 -reportprogress|300|sim/tb_top.v|
+!i113 0
+R10
+vtb_Tx
+!s110 1559269976
+!i10b 1
+!s100 Y5mV9eL8Gbm:]91ki?V?C3
+IeQ5S94;2NJi=fBcYaaWl;0
+R7
+R0
+w1558947491
+8sim/tb_Tx.v
+Fsim/tb_Tx.v
+R13
+R9
+r1
+!s85 0
+31
+!s108 1559269976.369000
 !s107 sim/tb_Tx.v|
 !s90 -reportprogress|300|sim/tb_Tx.v|
 !i113 0
-R7
+R10
 ntb_@tx
-vTx
-R4
+vTop
+R11
 !i10b 1
-!s100 74iDV8i6e;7::V]8CA33W1
-I<D<bVSlmOi@57oFUJl^CQ0
-R5
+!s100 [UUh2[HC^[;al9]FZBSLL3
+IJbccImnRRSmJ0dDZbKdGX1
+R7
 R0
-w1558946852
-8design/Tx.v
-Fdesign/Tx.v
+R14
+8design/Top.v
+Fdesign/Top.v
+R12
 R9
-R6
 r1
 !s85 0
 31
-!s108 1558946866.800000
+!s108 1559352100.158000
+!s107 design/Top.v|
+!s90 -reportprogress|300|design/Top.v|
+!i113 0
+R10
+n@top
+vTx
+R6
+!i10b 1
+!s100 jAW0ljfR>a;BjIaHL[k5T2
+IfR8zK;ECg6GoVV`n49cX@1
+R7
+R0
+w1558947514
+8design/Tx.v
+Fdesign/Tx.v
+R12
+R9
+r1
+!s85 0
+31
+!s108 1559352099.909000
 !s107 design/Tx.v|
 !s90 -reportprogress|300|design/Tx.v|
 !i113 0
-R7
+R10
 n@tx
+vudpSend
+R6
+!i10b 1
+!s100 Xko]aCaATTdhWUNJQl9Zh2
+IOJeboiJn[SZRYWFIGV3`F1
+R7
+R0
+w1559293167
+8design/udpSend.v
+Fdesign/udpSend.v
+R12
+R9
+r1
+!s85 0
+31
+!s108 1559352099.828000
+!s107 design/udpSend.v|
+!s90 -reportprogress|300|design/udpSend.v|
+!i113 0
+R10
+nudp@send

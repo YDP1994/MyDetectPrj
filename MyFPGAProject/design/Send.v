@@ -140,7 +140,7 @@ begin
 				 end
 				 else begin                        
 				    dataout[7:0]<=preamble[i][7:0];
-				    i<=i+1;
+				    i<=i+1'b1;
 				 end
 			end	
 			sendmac: begin                           //发送目标MAC address和源MAC address和IP包类型  

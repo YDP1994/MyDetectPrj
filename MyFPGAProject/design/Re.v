@@ -20,16 +20,14 @@
 //////////////////////////////////////////////////////////////////////////////////
 module Re(
 	 input clk_32,
+	 input clk_100,
 	 input rst_n,
 	 
 	 //Internet Ctrl
 	 output e_reset,	
-    output e_mdc,                      //MDIO的时钟信号，用于读写PHY的寄存器
-	 inout  e_mdio,                     //MDIO的数据信号，用于读写PHY的寄存器	
             
 	 input  e_rxc,                      //125Mhz ethernet gmii rx clock\
-
-	 input  e_txc,                      //25Mhz ethernet mii tx clock         
+    
 	 output e_gtxc,                     //25Mhz ethernet gmii tx clock  
 	 output e_txen,                     //GMII 发送数据有效信号	
 	 output e_txer,                     //GMII 发送数据错误信号					
@@ -37,13 +35,19 @@ module Re(
 		
 	 
 	 //Re Ctrl
+	 input  beginSignal,
 	 input  enADC,
-	 input  [7:0] addata        //AD data
+	 input  [7:0] addata,        //AD data
+	 output reg overRe,
+	 
+	 output [10 : 0]fifo_data_count,
+	 input fifo_rst
     );
 
 
 assign e_gtxc=e_rxc;	 
 assign e_reset = 1'b1; 
+
 
 reg [7:0] ad_data;
 always @(posedge clk_32)
@@ -57,17 +61,19 @@ begin
 end
 
 	//////////////////// DAC FIFO/////////////////// 
-wire [10 : 0] fifo_data_count;
+//wire [10 : 0] fifo_data_count;
 wire [7:0] fifo_data;
 wire fifo_rd_en;
 wire fifo_full;
 wire fifo_empty;
 	myFIFO myFIFO_inst (
+//	  .rst                      (!beginSignal),   // input rst
 	  .rst                      (fifo_rst),   // input rst
-	  //fifo_rst是一切都结束了，就rst一下
+	  //每一次按键下去的重新传输，都需要reset一下，清除一下数据
+	  
 	  .wr_clk                   (clk_32),                        // input wr_clk
-	  .din                      (ad_data),                       // input [7 : 0] din
-	  .wr_en                    (fifo_wr_en),                    // input wr_en
+	  .din                      (ad_data),                       // input [7 : 0] din		
+	  .wr_en                    (beginSignal),                   // input wr_en
 	  //fifo_wr_en是开始发送了，就设置1
 	  
 	  .rd_clk                   (e_rxc),                         // input rd_clk
@@ -80,6 +86,7 @@ wire fifo_empty;
 
 
 	/////////////////udp发送和接收程序/////////////////// 
+	//如果FIFO中的数据有1024个，就使能FIFO读
 	udpSend udpSend_inst(
 		.e_rxc                   (e_rxc),
 		.e_txen                  (e_txen),
@@ -95,5 +102,27 @@ wire fifo_empty;
 
 		);
 	
+reg [19:0]counter_for_key;
+	always@(posedge clk_100 or negedge rst_n)
+	begin
+		if(!rst_n) begin
+			counter_for_key <= 20'd0;
+			overRe <= 1'b0;
+		end
+		else if(beginSignal) begin
+			if(counter_for_key == 20'd999_999) begin
+				counter_for_key <= 20'd0;
+				overRe <= 1'b1;
+			end
+			else begin
+				counter_for_key <= counter_for_key +20'b1;
+				overRe <= 1'b0;
+			end
+		end
+		else begin
+			counter_for_key <= 20'd0;
+			overRe <= 1'b0;
+		end
+	end
 	
 endmodule

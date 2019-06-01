@@ -1,0 +1,21 @@
+
+
+
+// Instantiate the module
+Re instance_name (
+    .clk_32(clk_32), 
+    .rst_n(rst_n), 
+    .e_reset(e_reset), 
+    .e_mdc(e_mdc), 
+    .e_mdio(e_mdio), 
+    .e_rxc(e_rxc), 
+    .e_txc(e_txc), 
+    .e_gtxc(e_gtxc), 
+    .e_txen(e_txen), 
+    .e_txer(e_txer), 
+    .e_txd(e_txd), 
+    .enADC(enADC), 
+    .addata(addata)
+    );
+
+

@@ -1,0 +1,1 @@
+vhdtdtfi -lang verilog -prj MyFPGAProject -o E:/MyTangCeProject/MyFPGAProject/Ctrl.tfi -lib work E:/MyTangCeProject/MyFPGAProject/design//Ctrl.v -module Ctrl -template D:/Xilinx/Xilinx14.7/14.7/ISE_DS/ISE//data/tfi.tft -deleteonerror 
