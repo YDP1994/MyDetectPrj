@@ -146,8 +146,8 @@ Elaborating module <Re>.
 
 Elaborating module <myFIFO>.
 WARNING:HDLCompiler:1499 - "E:\MyTangCeProject\MyFPGAProject\ipcore_dir\Fifo\myFIFO.v" Line 39: Empty module <myFIFO> remains a black box.
-WARNING:HDLCompiler:1127 - "E:\MyTangCeProject\MyFPGAProject\design\Re.v" Line 80: Assignment to fifo_full ignored, since the identifier is never used
-WARNING:HDLCompiler:1127 - "E:\MyTangCeProject\MyFPGAProject\design\Re.v" Line 81: Assignment to fifo_empty ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "E:\MyTangCeProject\MyFPGAProject\design\Re.v" Line 81: Assignment to fifo_full ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "E:\MyTangCeProject\MyFPGAProject\design\Re.v" Line 82: Assignment to fifo_empty ignored, since the identifier is never used
 
 Elaborating module <udpSend>.
 
@@ -164,7 +164,7 @@ Elaborating module <DCM_SP(CLKDV_DIVIDE=2.0,CLKFX_DIVIDE=25,CLKFX_MULTIPLY=16,CL
 WARNING:HDLCompiler:1127 - "E:\MyTangCeProject\MyFPGAProject\ip\pllClock.v" Line 135: Assignment to status_int ignored, since the identifier is never used
 
 Elaborating module <BUFG>.
-WARNING:HDLCompiler:1127 - "E:\MyTangCeProject\MyFPGAProject\design\Top.v" Line 124: Assignment to clk_50 ignored, since the identifier is never used
+WARNING:HDLCompiler:1127 - "E:\MyTangCeProject\MyFPGAProject\design\Top.v" Line 122: Assignment to clk_50 ignored, since the identifier is never used
 
 =========================================================================
 *                           HDL Synthesis                               *
@@ -172,8 +172,8 @@ WARNING:HDLCompiler:1127 - "E:\MyTangCeProject\MyFPGAProject\design\Top.v" Line 
 
 Synthesizing Unit <Top>.
     Related source file is "E:\MyTangCeProject\MyFPGAProject\design\Top.v".
-INFO:Xst:3210 - "E:\MyTangCeProject\MyFPGAProject\design\Top.v" line 119: Output port <CLK_OUT2> of the instance <pllClock_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\MyTangCeProject\MyFPGAProject\design\Top.v" line 119: Output port <LOCKED> of the instance <pllClock_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\MyTangCeProject\MyFPGAProject\design\Top.v" line 117: Output port <CLK_OUT2> of the instance <pllClock_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\MyTangCeProject\MyFPGAProject\design\Top.v" line 117: Output port <LOCKED> of the instance <pllClock_inst> is unconnected or connected to loadless signal.
     Summary:
 	no macro.
 Unit <Top> synthesized.
@@ -221,10 +221,10 @@ Synthesizing Unit <Ctrl>.
     | Encoding           | auto                                           |
     | Implementation     | LUT                                            |
     -----------------------------------------------------------------------
-    Found 20-bit adder for signal <counter_for_key[19]_GND_4_o_add_1_OUT> created at line 58.
-    Found 10-bit adder for signal <counter_for_rst[9]_GND_4_o_add_32_OUT> created at line 225.
-    Found 10-bit comparator greater for signal <GND_4_o_counter_for_rst[9]_LessThan_30_o> created at line 220
-    Found 10-bit comparator greater for signal <counter_for_rst[9]_GND_4_o_LessThan_31_o> created at line 220
+    Found 20-bit adder for signal <counter_for_key[19]_GND_4_o_add_1_OUT> created at line 59.
+    Found 10-bit adder for signal <counter_for_rst[9]_GND_4_o_add_32_OUT> created at line 226.
+    Found 10-bit comparator greater for signal <GND_4_o_counter_for_rst[9]_LessThan_30_o> created at line 221
+    Found 10-bit comparator greater for signal <counter_for_rst[9]_GND_4_o_LessThan_31_o> created at line 221
     Summary:
 	inferred   2 Adder/Subtractor(s).
 	inferred  40 D-type flip-flop(s).
@@ -235,12 +235,13 @@ Unit <Ctrl> synthesized.
 
 Synthesizing Unit <Re>.
     Related source file is "E:\MyTangCeProject\MyFPGAProject\design\Re.v".
-INFO:Xst:3210 - "E:\MyTangCeProject\MyFPGAProject\design\Re.v" line 67: Output port <full> of the instance <myFIFO_inst> is unconnected or connected to loadless signal.
-INFO:Xst:3210 - "E:\MyTangCeProject\MyFPGAProject\design\Re.v" line 67: Output port <empty> of the instance <myFIFO_inst> is unconnected or connected to loadless signal.
+WARNING:Xst:647 - Input <addata> is never used. This port will be preserved and left unconnected if it belongs to a top-level block or it belongs to a sub-block and the hierarchy of this sub-block is preserved.
+INFO:Xst:3210 - "E:\MyTangCeProject\MyFPGAProject\design\Re.v" line 68: Output port <full> of the instance <myFIFO_inst> is unconnected or connected to loadless signal.
+INFO:Xst:3210 - "E:\MyTangCeProject\MyFPGAProject\design\Re.v" line 68: Output port <empty> of the instance <myFIFO_inst> is unconnected or connected to loadless signal.
     Found 20-bit register for signal <counter_for_key>.
     Found 1-bit register for signal <overRe>.
     Found 8-bit register for signal <ad_data>.
-    Found 20-bit adder for signal <counter_for_key[19]_GND_6_o_add_5_OUT> created at line 116.
+    Found 20-bit adder for signal <counter_for_key[19]_GND_6_o_add_5_OUT> created at line 117.
     Summary:
 	inferred   1 Adder/Subtractor(s).
 	inferred  29 D-type flip-flop(s).
@@ -430,7 +431,8 @@ Reading core <ipcore_dir/Fifo/myFIFO.ngc>.
 Reading core <ipcore_dir/chirpRom/chirpRom.ngc>.
 Loading core <myFIFO> for timing and area information for instance <myFIFO_inst>.
 Loading core <chirpRom> for timing and area information for instance <MyChirp>.
-WARNING:Xst:1710 - FF/Latch <ip_header_0_146> (without init value) has a constant value of 0 in block <Send_inst>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <ad_data_3> in Unit <Re_inst> is equivalent to the following 2 FFs/Latches, which will be removed : <ad_data_4> <ad_data_6> 
+INFO:Xst:2261 - The FF/Latch <ad_data_0> in Unit <Re_inst> is equivalent to the following 4 FFs/Latches, which will be removed : <ad_data_1> <ad_data_2> <ad_data_5> <ad_data_7> 
 WARNING:Xst:1710 - FF/Latch <ip_header_0_148> (without init value) has a constant value of 0 in block <Send_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <ip_header_0_150> (without init value) has a constant value of 0 in block <Send_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <ip_header_0_152> (without init value) has a constant value of 0 in block <Send_inst>. This FF/Latch will be trimmed during the optimization process.
@@ -449,7 +451,7 @@ WARNING:Xst:1710 - FF/Latch <ip_header_0_173> (without init value) has a constan
 WARNING:Xst:1710 - FF/Latch <ip_header_0_174> (without init value) has a constant value of 0 in block <Send_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <ip_header_0_175> (without init value) has a constant value of 0 in block <Send_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <ip_header_0_176> (without init value) has a constant value of 0 in block <Send_inst>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <ip_header_0_123> (without init value) has a constant value of 0 in block <Send_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ip_header_0_177> (without init value) has a constant value of 0 in block <Send_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <ip_header_0_124> (without init value) has a constant value of 0 in block <Send_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <ip_header_0_125> (without init value) has a constant value of 0 in block <Send_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <ip_header_0_130> (without init value) has a constant value of 0 in block <Send_inst>. This FF/Latch will be trimmed during the optimization process.
@@ -468,7 +470,7 @@ WARNING:Xst:1710 - FF/Latch <ip_header_0_142> (without init value) has a constan
 WARNING:Xst:1710 - FF/Latch <ip_header_0_143> (without init value) has a constant value of 0 in block <Send_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <ip_header_0_144> (without init value) has a constant value of 0 in block <Send_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <ip_header_0_145> (without init value) has a constant value of 0 in block <Send_inst>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <ip_header_0_203> (without init value) has a constant value of 0 in block <Send_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ip_header_0_146> (without init value) has a constant value of 0 in block <Send_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <ip_header_0_204> (without init value) has a constant value of 0 in block <Send_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <ip_header_0_205> (without init value) has a constant value of 0 in block <Send_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <ip_header_0_206> (without init value) has a constant value of 0 in block <Send_inst>. This FF/Latch will be trimmed during the optimization process.
@@ -487,7 +489,7 @@ WARNING:Xst:1710 - FF/Latch <ip_header_0_220> (without init value) has a constan
 WARNING:Xst:1710 - FF/Latch <ip_header_0_221> (without init value) has a constant value of 0 in block <Send_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <ip_header_0_222> (without init value) has a constant value of 0 in block <Send_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <ip_header_0_223> (without init value) has a constant value of 0 in block <Send_inst>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <ip_header_0_177> (without init value) has a constant value of 0 in block <Send_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ad_data_0> (without init value) has a constant value of 0 in block <Re_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <ip_header_0_178> (without init value) has a constant value of 0 in block <Send_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <ip_header_0_179> (without init value) has a constant value of 0 in block <Send_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <ip_header_0_181> (without init value) has a constant value of 0 in block <Send_inst>. This FF/Latch will be trimmed during the optimization process.
@@ -506,6 +508,7 @@ WARNING:Xst:1710 - FF/Latch <ip_header_0_199> (without init value) has a constan
 WARNING:Xst:1710 - FF/Latch <ip_header_0_200> (without init value) has a constant value of 0 in block <Send_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <ip_header_0_201> (without init value) has a constant value of 0 in block <Send_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <ip_header_0_202> (without init value) has a constant value of 0 in block <Send_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ip_header_0_203> (without init value) has a constant value of 0 in block <Send_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <ip_header_0_23> (without init value) has a constant value of 0 in block <Send_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <ip_header_0_25> (without init value) has a constant value of 0 in block <Send_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <ip_header_0_27> (without init value) has a constant value of 0 in block <Send_inst>. This FF/Latch will be trimmed during the optimization process.
@@ -544,7 +547,6 @@ WARNING:Xst:1710 - FF/Latch <ip_header_0_19> (without init value) has a constant
 WARNING:Xst:1710 - FF/Latch <ip_header_0_20> (without init value) has a constant value of 0 in block <Send_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <ip_header_0_21> (without init value) has a constant value of 0 in block <Send_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <ip_header_0_22> (without init value) has a constant value of 0 in block <Send_inst>. This FF/Latch will be trimmed during the optimization process.
-WARNING:Xst:1710 - FF/Latch <ip_header_0_101> (without init value) has a constant value of 0 in block <Send_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <ip_header_0_102> (without init value) has a constant value of 0 in block <Send_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <ip_header_0_103> (without init value) has a constant value of 0 in block <Send_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <ip_header_0_104> (without init value) has a constant value of 0 in block <Send_inst>. This FF/Latch will be trimmed during the optimization process.
@@ -563,6 +565,7 @@ WARNING:Xst:1710 - FF/Latch <ip_header_0_118> (without init value) has a constan
 WARNING:Xst:1710 - FF/Latch <ip_header_0_120> (without init value) has a constant value of 0 in block <Send_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <ip_header_0_121> (without init value) has a constant value of 0 in block <Send_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <ip_header_0_122> (without init value) has a constant value of 0 in block <Send_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ip_header_0_123> (without init value) has a constant value of 0 in block <Send_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <ip_header_0_45> (without init value) has a constant value of 0 in block <Send_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <ip_header_0_47> (without init value) has a constant value of 0 in block <Send_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <ip_header_0_81> (without init value) has a constant value of 0 in block <Send_inst>. This FF/Latch will be trimmed during the optimization process.
@@ -582,6 +585,7 @@ WARNING:Xst:1710 - FF/Latch <ip_header_0_96> (without init value) has a constant
 WARNING:Xst:1710 - FF/Latch <ip_header_0_98> (without init value) has a constant value of 0 in block <Send_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <ip_header_0_99> (without init value) has a constant value of 0 in block <Send_inst>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <ip_header_0_100> (without init value) has a constant value of 0 in block <Send_inst>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1710 - FF/Latch <ip_header_0_101> (without init value) has a constant value of 0 in block <Send_inst>. This FF/Latch will be trimmed during the optimization process.
 
 Synthesizing (advanced) Unit <Ctrl>.
 The following registers are absorbed into counter <counter_for_key>: 1 register on signal <counter_for_key>.
@@ -660,6 +664,11 @@ Macro Statistics
 =========================================================================
 *                         Low Level Synthesis                           *
 =========================================================================
+WARNING:Xst:1710 - FF/Latch <ad_data_0> (without init value) has a constant value of 0 in block <Re>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ad_data_1> (without init value) has a constant value of 0 in block <Re>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ad_data_2> (without init value) has a constant value of 0 in block <Re>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ad_data_5> (without init value) has a constant value of 0 in block <Re>. This FF/Latch will be trimmed during the optimization process.
+WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ad_data_7> (without init value) has a constant value of 0 in block <Re>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1710 - FF/Latch <ip_header_0_146> (without init value) has a constant value of 0 in block <Send>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ip_header_0_148> (without init value) has a constant value of 0 in block <Send>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ip_header_0_150> (without init value) has a constant value of 0 in block <Send>. This FF/Latch will be trimmed during the optimization process.
@@ -812,6 +821,7 @@ WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ip_header_0_96> (wi
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ip_header_0_98> (without init value) has a constant value of 0 in block <Send>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ip_header_0_99> (without init value) has a constant value of 0 in block <Send>. This FF/Latch will be trimmed during the optimization process.
 WARNING:Xst:1895 - Due to other FF/Latch trimming, FF/Latch <ip_header_0_100> (without init value) has a constant value of 0 in block <Send>. This FF/Latch will be trimmed during the optimization process.
+INFO:Xst:2261 - The FF/Latch <ad_data_3> in Unit <Re> is equivalent to the following 2 FFs/Latches, which will be removed : <ad_data_4> <ad_data_6> 
 Analyzing FSM <MFsm> for best encoding.
 Optimizing FSM <Re_inst/udpSend_inst/Send_inst/FSM_1> on signal <tx_state[1:3]> with gray encoding.
 -------------------
@@ -927,8 +937,8 @@ Final Macro Processing ...
 Final Register Report
 
 Macro Statistics
-# Registers                                            : 201
- Flip-Flops                                            : 201
+# Registers                                            : 194
+ Flip-Flops                                            : 194
 
 =========================================================================
 
@@ -951,12 +961,12 @@ Top Level Output File Name         : Top.ngc
 
 Primitive and Black Box Usage:
 ------------------------------
-# BELS                             : 885
+# BELS                             : 878
 #      GND                         : 4
 #      INV                         : 14
 #      LUT1                        : 76
-#      LUT2                        : 92
-#      LUT3                        : 75
+#      LUT2                        : 93
+#      LUT3                        : 67
 #      LUT4                        : 93
 #      LUT5                        : 69
 #      LUT6                        : 153
@@ -964,8 +974,8 @@ Primitive and Black Box Usage:
 #      MUXF7                       : 9
 #      VCC                         : 3
 #      XORCY                       : 141
-# FlipFlops/Latches                : 370
-#      FD                          : 14
+# FlipFlops/Latches                : 363
+#      FD                          : 7
 #      FD_1                        : 25
 #      FDC                         : 170
 #      FDCE                        : 49
@@ -978,8 +988,8 @@ Primitive and Black Box Usage:
 #      RAMB8BWER                   : 1
 # Clock Buffers                    : 4
 #      BUFG                        : 4
-# IO Buffers                       : 36
-#      IBUF                        : 11
+# IO Buffers                       : 28
+#      IBUF                        : 3
 #      IBUFG                       : 1
 #      OBUF                        : 24
 # DCMs                             : 1
@@ -992,20 +1002,20 @@ Selected Device : 6slx16csg324-2
 
 
 Slice Logic Utilization: 
- Number of Slice Registers:             370  out of  18224     2%  
- Number of Slice LUTs:                  572  out of   9112     6%  
-    Number used as Logic:               572  out of   9112     6%  
+ Number of Slice Registers:             363  out of  18224     1%  
+ Number of Slice LUTs:                  565  out of   9112     6%  
+    Number used as Logic:               565  out of   9112     6%  
 
 Slice Logic Distribution: 
- Number of LUT Flip Flop pairs used:    671
-   Number with an unused Flip Flop:     301  out of    671    44%  
-   Number with an unused LUT:            99  out of    671    14%  
-   Number of fully used LUT-FF pairs:   271  out of    671    40%  
+ Number of LUT Flip Flop pairs used:    664
+   Number with an unused Flip Flop:     301  out of    664    45%  
+   Number with an unused LUT:            99  out of    664    14%  
+   Number of fully used LUT-FF pairs:   264  out of    664    39%  
    Number of unique control sets:        24
 
 IO Utilization: 
- Number of IOs:                          38
- Number of bonded IOBs:                  36  out of    232    15%  
+ Number of IOs:                          36
+ Number of bonded IOBs:                  28  out of    232    12%  
 
 Specific Feature Utilization:
  Number of Block RAM/FIFO:                2  out of     32     6%  
@@ -1035,7 +1045,7 @@ Clock Signal                       | Clock buffer(FF name)                      
 -----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------+-------+
 clk                                | DCM_SP:CLK2X                                                                                                                            | 73    |
 e_rxc                              | IBUF+BUFG                                                                                                                               | 206   |
-clk                                | DCM_SP:CLKFX                                                                                                                            | 94    |
+clk                                | DCM_SP:CLKFX                                                                                                                            | 87    |
 Tx_inst/MyChirp/N1                 | NONE(Tx_inst/MyChirp/U0/xst_blk_mem_generator/gnativebmg.native_blk_mem_gen/valid.cstr/ramloop[0].ram.r/s6_init.ram/SP.SIMPLE_PRIM9.ram)| 1     |
 -----------------------------------+-----------------------------------------------------------------------------------------------------------------------------------------+-------+
 INFO:Xst:2169 - HDL ADVISOR - Some clock signals were not automatically buffered by XST with BUFG/BUFR resources. Please use the buffer_type constraint in order to insert these buffers to the clock signals to help prevent skew problems.
@@ -1049,7 +1059,7 @@ Timing Summary:
 Speed Grade: -2
 
    Minimum period: 52.768ns (Maximum Frequency: 18.951MHz)
-   Minimum input arrival time before clock: 5.024ns
+   Minimum input arrival time before clock: 4.782ns
    Maximum output required time after clock: 5.393ns
    Maximum combinational path delay: 4.921ns
 
@@ -1060,7 +1070,7 @@ All values displayed in nanoseconds (ns)
 =========================================================================
 Timing constraint: Default period analysis for Clock 'clk'
   Clock period: 52.768ns (frequency: 18.951MHz)
-  Total number of paths / destination ports: 2129 / 297
+  Total number of paths / destination ports: 2117 / 285
 -------------------------------------------------------------------------
 Delay:               3.298ns (Levels of Logic = 2)
   Source:            Ctrl_inst/beginSignal_1 (FF)
@@ -1106,9 +1116,9 @@ Delay:               4.414ns (Levels of Logic = 3)
 
 =========================================================================
 Timing constraint: Default OFFSET IN BEFORE for Clock 'clk'
-  Total number of paths / destination ports: 88 / 79
+  Total number of paths / destination ports: 73 / 72
 -------------------------------------------------------------------------
-Offset:              5.024ns (Levels of Logic = 2)
+Offset:              4.782ns (Levels of Logic = 2)
   Source:            rst_n (PAD)
   Destination:       Re_inst/counter_for_key_19 (FF)
   Destination Clock: clk rising 2.0X
@@ -1117,12 +1127,12 @@ Offset:              5.024ns (Levels of Logic = 2)
                                 Gate     Net
     Cell:in->out      fanout   Delay   Delay  Logical Name (Net Name)
     ----------------------------------------  ------------
-     IBUF:I->O            10   1.328   1.007  rst_n_IBUF (rst_n_IBUF)
+     IBUF:I->O             3   1.328   0.765  rst_n_IBUF (rst_n_IBUF)
      INV:I->O             70   0.255   1.975  Re_inst/rst_n_inv1_INV_0 (Ctrl_inst/rst_n_inv)
      FDC:CLR                   0.459          Ctrl_inst/beginSignal
     ----------------------------------------
-    Total                      5.024ns (2.042ns logic, 2.982ns route)
-                                       (40.6% logic, 59.4% route)
+    Total                      4.782ns (2.042ns logic, 2.740ns route)
+                                       (42.7% logic, 57.3% route)
 
 =========================================================================
 Timing constraint: Default OFFSET OUT AFTER for Clock 'clk'
@@ -1208,13 +1218,13 @@ e_rxc          |    3.873|    3.719|    7.534|         |
 
 
 Total REAL time to Xst completion: 8.00 secs
-Total CPU time to Xst completion: 8.26 secs
+Total CPU time to Xst completion: 8.38 secs
  
 --> 
 
-Total memory usage is 252664 kilobytes
+Total memory usage is 252920 kilobytes
 
 Number of errors   :    0 (   0 filtered)
-Number of warnings :  371 (   0 filtered)
-Number of infos    :   19 (   0 filtered)
+Number of warnings :  378 (   0 filtered)
+Number of infos    :   22 (   0 filtered)
 

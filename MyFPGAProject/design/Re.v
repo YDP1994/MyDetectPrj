@@ -53,7 +53,8 @@ begin
 	if(!rst_n)
       ad_data <= 8'd0;  
 	else if(enADC)
-		ad_data <= addata; 
+//		ad_data <= addata; 		
+		ad_data <= 8'd88; 		//Î´½Ó³¬ÉùÌ½Í·£¬²âÊÔÒÔÌ«Íø
 	else 
 		ad_data <= 8'd0;  
 end

@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- IMPORTANT: This is an internal file that has been generated
+     by the Xilinx ISE software.  Any direct editing or
+     changes made to this file may result in unpredictable
+     behavior or data corruption.  It is strongly advised that
+     users do not edit the contents of this file. -->
+<messages>
+<msg type="info" file="ConstraintSystem" num="178" delta="old" ><arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">sys_clk_pin</arg>&apos;, used in period specification &apos;<arg fmt="%s" index="3">TS_sys_clk_pin</arg>&apos;, was traced into <arg fmt="%s" index="4">DCM_SP</arg> instance <arg fmt="%s" index="5">pllClock_inst/dcm_sp_inst</arg>. The following new TNM groups and period specifications were generated at the <arg fmt="%s" index="6">DCM_SP</arg> output(s): 
+<arg fmt="%s" index="7">CLK2X</arg>: <arg fmt="%s" index="8">&lt;TIMESPEC TS_pllClock_inst_clk2x = PERIOD &quot;pllClock_inst_clk2x&quot; TS_sys_clk_pin * 2 HIGH 50%&gt;</arg>
+</msg>
+
+<msg type="info" file="ConstraintSystem" num="178" delta="old" ><arg fmt="%s" index="1">TNM</arg> &apos;<arg fmt="%s" index="2">sys_clk_pin</arg>&apos;, used in period specification &apos;<arg fmt="%s" index="3">TS_sys_clk_pin</arg>&apos;, was traced into <arg fmt="%s" index="4">DCM_SP</arg> instance <arg fmt="%s" index="5">pllClock_inst/dcm_sp_inst</arg>. The following new TNM groups and period specifications were generated at the <arg fmt="%s" index="6">DCM_SP</arg> output(s): 
+<arg fmt="%s" index="7">CLKFX</arg>: <arg fmt="%s" index="8">&lt;TIMESPEC TS_pllClock_inst_clkfx = PERIOD &quot;pllClock_inst_clkfx&quot; TS_sys_clk_pin * 0.64 HIGH 50%&gt;</arg>
+</msg>
+
+<msg type="warning" file="NgdBuild" num="1345" delta="old" >The constraint <arg fmt="%s" index="1">&lt;NET &quot;e_txd&lt;?&gt;&quot; OFFSET=OUT 2ns BEFORE e_gtxc;&gt; [ucf/top_ucf.ucf(68)]</arg> is overridden by the constraint <arg fmt="%s" index="2">&lt;NET &quot;e_txd&lt;?&gt;&quot; OFFSET=OUT 3ns AFTER e_gtxc;&gt; [ucf/top_ucf.ucf(72)]</arg>. The overriden constraint usually comes from the input netlist or ncf files. Please set XIL_NGDBUILD_CONSTR_OVERRIDE_ERROR to promote this message to an error.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="1345" delta="old" >The constraint <arg fmt="%s" index="1">&lt;NET &quot;e_txen&quot; OFFSET=OUT 2ns BEFORE e_gtxc;&gt; [ucf/top_ucf.ucf(69)]</arg> is overridden by the constraint <arg fmt="%s" index="2">&lt;NET &quot;e_txen&quot; OFFSET=OUT 3ns AFTER e_gtxc;&gt; [ucf/top_ucf.ucf(73)]</arg>. The overriden constraint usually comes from the input netlist or ncf files. Please set XIL_NGDBUILD_CONSTR_OVERRIDE_ERROR to promote this message to an error.
+</msg>
+
+<msg type="warning" file="NgdBuild" num="1345" delta="old" >The constraint <arg fmt="%s" index="1">&lt;NET &quot;e_txer&quot; OFFSET=OUT 2ns BEFORE e_gtxc;&gt; [ucf/top_ucf.ucf(70)]</arg> is overridden by the constraint <arg fmt="%s" index="2">&lt;NET &quot;e_txer&quot; OFFSET=OUT 3ns AFTER e_gtxc;&gt; [ucf/top_ucf.ucf(74)]</arg>. The overriden constraint usually comes from the input netlist or ncf files. Please set XIL_NGDBUILD_CONSTR_OVERRIDE_ERROR to promote this message to an error.
+</msg>
+
+</messages>
+

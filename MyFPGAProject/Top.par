@@ -1,0 +1,387 @@
+Release 14.7 par P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+DESKTOP-7DVRM4L::  Mon Jun 03 14:24:40 2019
+
+par -w -intstyle ise -ol high -mt off Top_map.ncd Top.ncd Top.pcf 
+
+
+Constraints file: Top.pcf.
+Loading device for application Rf_Device from file '6slx16.nph' in environment D:\Xilinx\Xilinx14.7\14.7\ISE_DS\ISE\.
+   "Top" is an NCD, version 3.2, device xc6slx16, package csg324, speed -2
+WARNING:ConstraintSystem:65 - Constraint <COMP "e_txd<7>" OFFSET = OUT 3 ns AFTER COMP "e_gtxc";> [Top.pcf(572)]
+   overrides constraint <COMP "e_txd<7>" OFFSET = OUT 2 ns BEFORE COMP "e_gtxc";> [Top.pcf(571)].
+
+WARNING:ConstraintSystem:65 - Constraint <COMP "e_txd<6>" OFFSET = OUT 3 ns AFTER COMP "e_gtxc";> [Top.pcf(574)]
+   overrides constraint <COMP "e_txd<6>" OFFSET = OUT 2 ns BEFORE COMP "e_gtxc";> [Top.pcf(573)].
+
+WARNING:ConstraintSystem:65 - Constraint <COMP "e_txd<5>" OFFSET = OUT 3 ns AFTER COMP "e_gtxc";> [Top.pcf(576)]
+   overrides constraint <COMP "e_txd<5>" OFFSET = OUT 2 ns BEFORE COMP "e_gtxc";> [Top.pcf(575)].
+
+WARNING:ConstraintSystem:65 - Constraint <COMP "e_txd<4>" OFFSET = OUT 3 ns AFTER COMP "e_gtxc";> [Top.pcf(578)]
+   overrides constraint <COMP "e_txd<4>" OFFSET = OUT 2 ns BEFORE COMP "e_gtxc";> [Top.pcf(577)].
+
+WARNING:ConstraintSystem:65 - Constraint <COMP "e_txd<3>" OFFSET = OUT 3 ns AFTER COMP "e_gtxc";> [Top.pcf(580)]
+   overrides constraint <COMP "e_txd<3>" OFFSET = OUT 2 ns BEFORE COMP "e_gtxc";> [Top.pcf(579)].
+
+WARNING:ConstraintSystem:65 - Constraint <COMP "e_txd<2>" OFFSET = OUT 3 ns AFTER COMP "e_gtxc";> [Top.pcf(582)]
+   overrides constraint <COMP "e_txd<2>" OFFSET = OUT 2 ns BEFORE COMP "e_gtxc";> [Top.pcf(581)].
+
+WARNING:ConstraintSystem:65 - Constraint <COMP "e_txd<1>" OFFSET = OUT 3 ns AFTER COMP "e_gtxc";> [Top.pcf(584)]
+   overrides constraint <COMP "e_txd<1>" OFFSET = OUT 2 ns BEFORE COMP "e_gtxc";> [Top.pcf(583)].
+
+WARNING:ConstraintSystem:65 - Constraint <COMP "e_txd<0>" OFFSET = OUT 3 ns AFTER COMP "e_gtxc";> [Top.pcf(586)]
+   overrides constraint <COMP "e_txd<0>" OFFSET = OUT 2 ns BEFORE COMP "e_gtxc";> [Top.pcf(585)].
+
+WARNING:ConstraintSystem:65 - Constraint <COMP "e_txen" OFFSET = OUT 3 ns AFTER COMP "e_gtxc";> [Top.pcf(588)] overrides
+   constraint <COMP "e_txen" OFFSET = OUT 2 ns BEFORE COMP "e_gtxc";> [Top.pcf(587)].
+
+WARNING:ConstraintSystem:65 - Constraint <COMP "e_txer" OFFSET = OUT 3 ns AFTER COMP "e_gtxc";> [Top.pcf(590)] overrides
+   constraint <COMP "e_txer" OFFSET = OUT 2 ns BEFORE COMP "e_gtxc";> [Top.pcf(589)].
+
+
+Initializing temperature to 85.000 Celsius. (default - Range: 0.000 to 85.000 Celsius)
+Initializing voltage to 1.140 Volts. (default - Range: 1.140 to 1.260 Volts)
+
+
+Device speed data version:  "PRODUCTION 1.23 2013-10-13".
+
+
+
+Device Utilization Summary:
+
+Slice Logic Utilization:
+  Number of Slice Registers:                   373 out of  18,224    2%
+    Number used as Flip Flops:                 358
+    Number used as Latches:                      0
+    Number used as Latch-thrus:                  0
+    Number used as AND/OR logics:               15
+  Number of Slice LUTs:                        507 out of   9,112    5%
+    Number used as logic:                      478 out of   9,112    5%
+      Number using O6 output only:             286
+      Number using O5 output only:              67
+      Number using O5 and O6:                  125
+      Number used as ROM:                        0
+    Number used as Memory:                       0 out of   2,176    0%
+    Number used exclusively as route-thrus:     29
+      Number with same-slice register load:     20
+      Number with same-slice carry load:         9
+      Number with other load:                    0
+
+Slice Logic Distribution:
+  Number of occupied Slices:                   183 out of   2,278    8%
+  Number of MUXCYs used:                       184 out of   4,556    4%
+  Number of LUT Flip Flop pairs used:          561
+    Number with an unused Flip Flop:           246 out of     561   43%
+    Number with an unused LUT:                  54 out of     561    9%
+    Number of fully used LUT-FF pairs:         261 out of     561   46%
+    Number of slice register sites lost
+      to control set restrictions:               0 out of  18,224    0%
+
+  A LUT Flip Flop pair for this architecture represents one LUT paired with
+  one Flip Flop within a slice.  A control set is a unique combination of
+  clock, reset, set, and enable signals for a registered element.
+  The Slice Logic Distribution report is not meaningful if the design is
+  over-mapped for a non-slice resource or if Placement fails.
+
+IO Utilization:
+  Number of bonded IOBs:                        36 out of     232   15%
+    Number of LOCed IOBs:                       36 out of      36  100%
+
+Specific Feature Utilization:
+  Number of RAMB16BWERs:                         1 out of      32    3%
+  Number of RAMB8BWERs:                          1 out of      64    1%
+  Number of BUFIO2/BUFIO2_2CLKs:                 1 out of      32    3%
+    Number used as BUFIO2s:                      1
+    Number used as BUFIO2_2CLKs:                 0
+  Number of BUFIO2FB/BUFIO2FB_2CLKs:             1 out of      32    3%
+    Number used as BUFIO2FBs:                    1
+    Number used as BUFIO2FB_2CLKs:               0
+  Number of BUFG/BUFGMUXs:                       4 out of      16   25%
+    Number used as BUFGs:                        4
+    Number used as BUFGMUX:                      0
+  Number of DCM/DCM_CLKGENs:                     1 out of       4   25%
+    Number used as DCMs:                         1
+    Number used as DCM_CLKGENs:                  0
+  Number of ILOGIC2/ISERDES2s:                   0 out of     248    0%
+  Number of IODELAY2/IODRP2/IODRP2_MCBs:         0 out of     248    0%
+  Number of OLOGIC2/OSERDES2s:                   0 out of     248    0%
+  Number of BSCANs:                              0 out of       4    0%
+  Number of BUFHs:                               0 out of     128    0%
+  Number of BUFPLLs:                             0 out of       8    0%
+  Number of BUFPLL_MCBs:                         0 out of       4    0%
+  Number of DSP48A1s:                            0 out of      32    0%
+  Number of ICAPs:                               0 out of       1    0%
+  Number of MCBs:                                0 out of       2    0%
+  Number of PCILOGICSEs:                         0 out of       2    0%
+  Number of PLL_ADVs:                            0 out of       2    0%
+  Number of PMVs:                                0 out of       1    0%
+  Number of STARTUPs:                            0 out of       1    0%
+  Number of SUSPEND_SYNCs:                       0 out of       1    0%
+
+
+Overall effort level (-ol):   High 
+Router effort level (-rl):    High 
+
+WARNING:Timing:3175 - e_gtxc does not clock data to e_txd<7>
+WARNING:Timing:3225 - Timing constraint COMP "e_txd<7>" OFFSET = OUT 2 ns BEFORE COMP "e_gtxc"; ignored during timing analysis
+WARNING:Timing:3175 - e_gtxc does not clock data to e_txd<7>
+WARNING:Timing:3225 - Timing constraint COMP "e_txd<7>" OFFSET = OUT 3 ns AFTER COMP "e_gtxc"; ignored during timing analysis
+WARNING:Timing:3175 - e_gtxc does not clock data to e_txd<6>
+WARNING:Timing:3225 - Timing constraint COMP "e_txd<6>" OFFSET = OUT 2 ns BEFORE COMP "e_gtxc"; ignored during timing analysis
+WARNING:Timing:3175 - e_gtxc does not clock data to e_txd<6>
+WARNING:Timing:3225 - Timing constraint COMP "e_txd<6>" OFFSET = OUT 3 ns AFTER COMP "e_gtxc"; ignored during timing analysis
+WARNING:Timing:3175 - e_gtxc does not clock data to e_txd<5>
+WARNING:Timing:3225 - Timing constraint COMP "e_txd<5>" OFFSET = OUT 2 ns BEFORE COMP "e_gtxc"; ignored during timing analysis
+WARNING:Timing:3175 - e_gtxc does not clock data to e_txd<5>
+WARNING:Timing:3225 - Timing constraint COMP "e_txd<5>" OFFSET = OUT 3 ns AFTER COMP "e_gtxc"; ignored during timing analysis
+WARNING:Timing:3175 - e_gtxc does not clock data to e_txd<4>
+WARNING:Timing:3225 - Timing constraint COMP "e_txd<4>" OFFSET = OUT 2 ns BEFORE COMP "e_gtxc"; ignored during timing analysis
+WARNING:Timing:3175 - e_gtxc does not clock data to e_txd<4>
+WARNING:Timing:3225 - Timing constraint COMP "e_txd<4>" OFFSET = OUT 3 ns AFTER COMP "e_gtxc"; ignored during timing analysis
+WARNING:Timing:3175 - e_gtxc does not clock data to e_txd<3>
+WARNING:Timing:3225 - Timing constraint COMP "e_txd<3>" OFFSET = OUT 2 ns BEFORE COMP "e_gtxc"; ignored during timing analysis
+WARNING:Timing:3175 - e_gtxc does not clock data to e_txd<3>
+WARNING:Timing:3225 - Timing constraint COMP "e_txd<3>" OFFSET = OUT 3 ns AFTER COMP "e_gtxc"; ignored during timing analysis
+WARNING:Timing:3175 - e_gtxc does not clock data to e_txd<2>
+WARNING:Timing:3225 - Timing constraint COMP "e_txd<2>" OFFSET = OUT 2 ns BEFORE COMP "e_gtxc"; ignored during timing analysis
+WARNING:Timing:3175 - e_gtxc does not clock data to e_txd<2>
+WARNING:Timing:3225 - Timing constraint COMP "e_txd<2>" OFFSET = OUT 3 ns AFTER COMP "e_gtxc"; ignored during timing analysis
+WARNING:Timing:3175 - e_gtxc does not clock data to e_txd<1>
+WARNING:Timing:3225 - Timing constraint COMP "e_txd<1>" OFFSET = OUT 2 ns BEFORE COMP "e_gtxc"; ignored during timing analysis
+WARNING:Timing:3175 - e_gtxc does not clock data to e_txd<1>
+WARNING:Timing:3225 - Timing constraint COMP "e_txd<1>" OFFSET = OUT 3 ns AFTER COMP "e_gtxc"; ignored during timing analysis
+WARNING:Timing:3175 - e_gtxc does not clock data to e_txd<0>
+WARNING:Timing:3225 - Timing constraint COMP "e_txd<0>" OFFSET = OUT 2 ns BEFORE COMP "e_gtxc"; ignored during timing analysis
+WARNING:Timing:3175 - e_gtxc does not clock data to e_txd<0>
+WARNING:Timing:3225 - Timing constraint COMP "e_txd<0>" OFFSET = OUT 3 ns AFTER COMP "e_gtxc"; ignored during timing analysis
+WARNING:Timing:3175 - e_gtxc does not clock data to e_txen
+WARNING:Timing:3225 - Timing constraint COMP "e_txen" OFFSET = OUT 2 ns BEFORE COMP "e_gtxc"; ignored during timing analysis
+WARNING:Timing:3175 - e_gtxc does not clock data to e_txen
+WARNING:Timing:3225 - Timing constraint COMP "e_txen" OFFSET = OUT 3 ns AFTER COMP "e_gtxc"; ignored during timing analysis
+WARNING:Timing:3175 - e_gtxc does not clock data to e_txer
+WARNING:Timing:3225 - Timing constraint COMP "e_txer" OFFSET = OUT 2 ns BEFORE COMP "e_gtxc"; ignored during timing analysis
+WARNING:Timing:3175 - e_gtxc does not clock data to e_txer
+WARNING:Timing:3225 - Timing constraint COMP "e_txer" OFFSET = OUT 3 ns AFTER COMP "e_gtxc"; ignored during timing analysis
+Starting initial Timing Analysis.  REAL time: 2 secs 
+Finished initial Timing Analysis.  REAL time: 2 secs 
+
+WARNING:Par:288 - The signal addata<0>_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal addata<1>_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal addata<2>_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal addata<3>_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal addata<4>_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal addata<5>_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal addata<6>_IBUF has no load.  PAR will not attempt to route this signal.
+WARNING:Par:288 - The signal addata<7>_IBUF has no load.  PAR will not attempt to route this signal.
+Starting Router
+
+
+Phase  1  : 2736 unrouted;      REAL time: 2 secs 
+
+Phase  2  : 2254 unrouted;      REAL time: 3 secs 
+
+Phase  3  : 706 unrouted;      REAL time: 4 secs 
+
+Phase  4  : 704 unrouted; (Setup:69464, Hold:0, Component Switching Limit:0)     REAL time: 4 secs 
+
+Updating file: Top.ncd with current fully routed design.
+
+Phase  5  : 0 unrouted; (Setup:69464, Hold:0, Component Switching Limit:0)     REAL time: 5 secs 
+
+Phase  6  : 0 unrouted; (Setup:69464, Hold:0, Component Switching Limit:0)     REAL time: 5 secs 
+
+Phase  7  : 0 unrouted; (Setup:69464, Hold:0, Component Switching Limit:0)     REAL time: 6 secs 
+
+Phase  8  : 0 unrouted; (Setup:69464, Hold:0, Component Switching Limit:0)     REAL time: 6 secs 
+
+Phase  9  : 0 unrouted; (Setup:69464, Hold:0, Component Switching Limit:0)     REAL time: 6 secs 
+
+Phase 10  : 0 unrouted; (Setup:69451, Hold:0, Component Switching Limit:0)     REAL time: 7 secs 
+Total REAL time to Router completion: 7 secs 
+Total CPU time to Router completion: 7 secs 
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+Generating "PAR" statistics.
+
+**************************
+Generating Clock Report
+**************************
+
++---------------------+--------------+------+------+------------+-------------+
+|        Clock Net    |   Resource   |Locked|Fanout|Net Skew(ns)|Max Delay(ns)|
++---------------------+--------------+------+------+------------+-------------+
+|     e_rxc_IBUF_BUFG |  BUFGMUX_X3Y6| No   |   72 |  0.052     |  1.129      |
++---------------------+--------------+------+------+------------+-------------+
+|          daclk_OBUF |  BUFGMUX_X2Y2| No   |   28 |  0.052     |  1.128      |
++---------------------+--------------+------+------+------------+-------------+
+|          adclk_OBUF |  BUFGMUX_X2Y4| No   |   26 |  0.049     |  1.128      |
++---------------------+--------------+------+------+------------+-------------+
+
+* Net Skew is the difference between the minimum and maximum routing
+only delays for the net. Note this is different from Clock Skew which
+is reported in TRCE timing report. Clock Skew is the difference between
+the minimum and maximum path delays which includes logic delays.
+
+* The fanout is the number of component pins not the individual BEL loads,
+for example SLICE loads not FF loads.
+
+Timing Score: 69451 (Setup: 69451, Hold: 0, Component Switching Limit: 0)
+
+WARNING:Par:468 - Your design did not meet timing.  The following are some suggestions to assist you to meet timing in your design.
+
+   Review the timing report using Timing Analyzer (In ISE select "Post-Place &
+   Route Static Timing Report"). Go to the failing constraint(s) and evaluate the failing paths for each constraint.
+
+   Try the Design Goal and Strategies for Timing Performance(In ISE select Project -> Design Goals & Strategies) to ensure the best options
+   are set in the tools for timing closure.
+
+   Use the Xilinx "SmartXplorer" script to try special combinations of
+   options known to produce very good results.
+
+   Visit the Xilinx technical support web at http://support.xilinx.com and go to
+   either "Troubleshoot->Tech Tips->Timing & Constraints" or "
+   TechXclusives->Timing Closure" for tips and suggestions for meeting timing
+   in your design.
+
+Number of Timing Constraints that were not applied: 22
+
+Asterisk (*) preceding a constraint indicates it was not met.
+   This may be due to a setup or hold violation.
+
+----------------------------------------------------------------------------------------------------------
+  Constraint                                |    Check    | Worst Case |  Best Case | Timing |   Timing   
+                                            |             |    Slack   | Achievable | Errors |    Score   
+----------------------------------------------------------------------------------------------------------
+* TS_pllClock_inst_clkfx = PERIOD TIMEGRP " | SETUP       |    -2.298ns|    88.700ns|      42|       69451
+  pllClock_inst_clkfx" TS_sys_clk_pin *     | HOLD        |     0.382ns|            |       0|           0
+       0.64 HIGH 50%                        |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_grxc_clk_pin = PERIOD TIMEGRP "grxc_cl | SETUP       |     0.219ns|     7.562ns|       0|           0
+  k_pin" 8 ns HIGH 50%                      | HOLD        |     0.405ns|            |       0|           0
+----------------------------------------------------------------------------------------------------------
+  TS_pllClock_inst_clk2x = PERIOD TIMEGRP " | SETUP       |     4.534ns|     5.466ns|       0|           0
+  pllClock_inst_clk2x" TS_sys_clk_pin *     | HOLD        |     0.412ns|            |       0|           0
+       2 HIGH 50%                           |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_sys_clk_pin = PERIOD TIMEGRP "sys_clk_ | MINLOWPULSE |    12.000ns|     8.000ns|       0|           0
+  pin" 50 MHz HIGH 50%                      |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  COMP "e_txer" OFFSET = OUT 3 ns AFTER COM | N/A         |         N/A|         N/A|     N/A|         N/A
+  P "e_gtxc"                                |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  COMP "e_txer" OFFSET = OUT 2 ns BEFORE CO | N/A         |         N/A|         N/A|     N/A|         N/A
+  MP "e_gtxc"                               |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  COMP "e_txen" OFFSET = OUT 3 ns AFTER COM | N/A         |         N/A|         N/A|     N/A|         N/A
+  P "e_gtxc"                                |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  COMP "e_txen" OFFSET = OUT 2 ns BEFORE CO | N/A         |         N/A|         N/A|     N/A|         N/A
+  MP "e_gtxc"                               |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  COMP "e_txd<0>" OFFSET = OUT 3 ns AFTER C | N/A         |         N/A|         N/A|     N/A|         N/A
+  OMP "e_gtxc"                              |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  COMP "e_txd<0>" OFFSET = OUT 2 ns BEFORE  | N/A         |         N/A|         N/A|     N/A|         N/A
+  COMP "e_gtxc"                             |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  COMP "e_txd<1>" OFFSET = OUT 3 ns AFTER C | N/A         |         N/A|         N/A|     N/A|         N/A
+  OMP "e_gtxc"                              |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  COMP "e_txd<1>" OFFSET = OUT 2 ns BEFORE  | N/A         |         N/A|         N/A|     N/A|         N/A
+  COMP "e_gtxc"                             |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  COMP "e_txd<2>" OFFSET = OUT 3 ns AFTER C | N/A         |         N/A|         N/A|     N/A|         N/A
+  OMP "e_gtxc"                              |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  COMP "e_txd<2>" OFFSET = OUT 2 ns BEFORE  | N/A         |         N/A|         N/A|     N/A|         N/A
+  COMP "e_gtxc"                             |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  COMP "e_txd<3>" OFFSET = OUT 3 ns AFTER C | N/A         |         N/A|         N/A|     N/A|         N/A
+  OMP "e_gtxc"                              |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  COMP "e_txd<3>" OFFSET = OUT 2 ns BEFORE  | N/A         |         N/A|         N/A|     N/A|         N/A
+  COMP "e_gtxc"                             |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  COMP "e_txd<4>" OFFSET = OUT 3 ns AFTER C | N/A         |         N/A|         N/A|     N/A|         N/A
+  OMP "e_gtxc"                              |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  COMP "e_txd<4>" OFFSET = OUT 2 ns BEFORE  | N/A         |         N/A|         N/A|     N/A|         N/A
+  COMP "e_gtxc"                             |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  COMP "e_txd<5>" OFFSET = OUT 3 ns AFTER C | N/A         |         N/A|         N/A|     N/A|         N/A
+  OMP "e_gtxc"                              |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  COMP "e_txd<5>" OFFSET = OUT 2 ns BEFORE  | N/A         |         N/A|         N/A|     N/A|         N/A
+  COMP "e_gtxc"                             |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  COMP "e_txd<6>" OFFSET = OUT 3 ns AFTER C | N/A         |         N/A|         N/A|     N/A|         N/A
+  OMP "e_gtxc"                              |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  COMP "e_txd<6>" OFFSET = OUT 2 ns BEFORE  | N/A         |         N/A|         N/A|     N/A|         N/A
+  COMP "e_gtxc"                             |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  COMP "e_txd<7>" OFFSET = OUT 3 ns AFTER C | N/A         |         N/A|         N/A|     N/A|         N/A
+  OMP "e_gtxc"                              |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  COMP "e_txd<7>" OFFSET = OUT 2 ns BEFORE  | N/A         |         N/A|         N/A|     N/A|         N/A
+  COMP "e_gtxc"                             |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+  TS_gtxc_clk_pin = PERIOD TIMEGRP "gtxc_cl | N/A         |         N/A|         N/A|     N/A|         N/A
+  k_pin" 8 ns HIGH 50%                      |             |            |            |        |            
+----------------------------------------------------------------------------------------------------------
+
+
+Derived Constraint Report
+Review Timing Report for more details on the following derived constraints.
+To create a Timing Report, run "trce -v 12 -fastpaths -o design_timing_report design.ncd design.pcf"
+or "Run Timing Analysis" from Timing Analyzer (timingan).
+Derived Constraints for TS_sys_clk_pin
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|                               |   Period    |       Actual Period       |      Timing Errors        |      Paths Analyzed       |
+|           Constraint          | Requirement |-------------+-------------|-------------+-------------|-------------+-------------|
+|                               |             |   Direct    | Derivative  |   Direct    | Derivative  |   Direct    | Derivative  |
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+|TS_sys_clk_pin                 |     20.000ns|      8.000ns|     56.768ns|            0|           42|            0|         2069|
+| TS_pllClock_inst_clk2x        |     10.000ns|      5.466ns|          N/A|            0|            0|         1663|            0|
+| TS_pllClock_inst_clkfx        |     31.250ns|     88.700ns|          N/A|           42|            0|          406|            0|
++-------------------------------+-------------+-------------+-------------+-------------+-------------+-------------+-------------+
+
+1 constraint not met.
+INFO:Timing:2761 - N/A entries in the Constraints List may indicate that the 
+   constraint is not analyzed due to the following: No paths covered by this 
+   constraint; Other constraints intersect with this constraint; or This 
+   constraint was disabled by a Path Tracing Control. Please run the Timespec 
+   Interaction Report (TSI) via command line (trce tsi) or Timing Analyzer GUI.
+
+
+Generating Pad Report.
+
+All signals are completely routed.
+
+WARNING:Par:283 - There are 8 loadless signals in this design. This design will cause Bitgen to issue DRC warnings.
+
+Total REAL time to PAR completion: 7 secs 
+Total CPU time to PAR completion: 7 secs 
+
+Peak Memory Usage:  334 MB
+
+Placer: Placement generated during map.
+Routing: Completed - No errors found.
+Timing: Completed - 42 errors found.
+
+Number of error messages: 0
+Number of warning messages: 61
+Number of info messages: 0
+
+Writing design to file Top.ncd
+
+
+
+PAR done!

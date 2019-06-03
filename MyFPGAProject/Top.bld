@@ -1,0 +1,67 @@
+Release 14.7 ngdbuild P.20131013 (nt)
+Copyright (c) 1995-2013 Xilinx, Inc.  All rights reserved.
+
+Command Line: D:\Xilinx\Xilinx14.7\14.7\ISE_DS\ISE\bin\nt\unwrapped\ngdbuild.exe
+-intstyle ise -dd _ngo -sd ipcore_dir/chirpRom -sd ipcore_dir/Fifo -sd ip -nt
+timestamp -uc ucf/top_ucf.ucf -p xc6slx16-csg324-2 Top.ngc Top.ngd
+
+Reading NGO file "E:/MyTangCeProject/MyFPGAProject/Top.ngc" ...
+Loading design module "ipcore_dir/Fifo/myFIFO.ngc"...
+Loading design module "ipcore_dir/chirpRom/chirpRom.ngc"...
+Gathering constraint information from source properties...
+Done.
+
+Annotating constraints to design from ucf file "ucf/top_ucf.ucf" ...
+Resolving constraint associations...
+Checking Constraint Associations...
+INFO:ConstraintSystem:178 - TNM 'sys_clk_pin', used in period specification
+   'TS_sys_clk_pin', was traced into DCM_SP instance pllClock_inst/dcm_sp_inst.
+   The following new TNM groups and period specifications were generated at the
+   DCM_SP output(s): 
+   CLK2X: <TIMESPEC TS_pllClock_inst_clk2x = PERIOD "pllClock_inst_clk2x"
+   TS_sys_clk_pin * 2 HIGH 50%>
+
+INFO:ConstraintSystem:178 - TNM 'sys_clk_pin', used in period specification
+   'TS_sys_clk_pin', was traced into DCM_SP instance pllClock_inst/dcm_sp_inst.
+   The following new TNM groups and period specifications were generated at the
+   DCM_SP output(s): 
+   CLKFX: <TIMESPEC TS_pllClock_inst_clkfx = PERIOD "pllClock_inst_clkfx"
+   TS_sys_clk_pin * 0.64 HIGH 50%>
+
+WARNING:NgdBuild:1345 - The constraint <NET "e_txd<?>" OFFSET=OUT 2ns BEFORE
+   e_gtxc;> [ucf/top_ucf.ucf(68)] is overridden by the constraint <NET
+   "e_txd<?>" OFFSET=OUT 3ns AFTER e_gtxc;> [ucf/top_ucf.ucf(72)]. The overriden
+   constraint usually comes from the input netlist or ncf files. Please set
+   XIL_NGDBUILD_CONSTR_OVERRIDE_ERROR to promote this message to an error.
+WARNING:NgdBuild:1345 - The constraint <NET "e_txen" OFFSET=OUT 2ns BEFORE
+   e_gtxc;> [ucf/top_ucf.ucf(69)] is overridden by the constraint <NET "e_txen"
+   OFFSET=OUT 3ns AFTER e_gtxc;> [ucf/top_ucf.ucf(73)]. The overriden constraint
+   usually comes from the input netlist or ncf files. Please set
+   XIL_NGDBUILD_CONSTR_OVERRIDE_ERROR to promote this message to an error.
+WARNING:NgdBuild:1345 - The constraint <NET "e_txer" OFFSET=OUT 2ns BEFORE
+   e_gtxc;> [ucf/top_ucf.ucf(70)] is overridden by the constraint <NET "e_txer"
+   OFFSET=OUT 3ns AFTER e_gtxc;> [ucf/top_ucf.ucf(74)]. The overriden constraint
+   usually comes from the input netlist or ncf files. Please set
+   XIL_NGDBUILD_CONSTR_OVERRIDE_ERROR to promote this message to an error.
+Done...
+
+Checking expanded design ...
+
+Partition Implementation Status
+-------------------------------
+
+  No Partitions were found in this design.
+
+-------------------------------
+
+NGDBUILD Design Results Summary:
+  Number of errors:     0
+  Number of warnings:   3
+
+Total memory usage is 157392 kilobytes
+
+Writing NGD file "Top.ngd" ...
+Total REAL time to NGDBUILD completion:  2 sec
+Total CPU time to NGDBUILD completion:   2 sec
+
+Writing NGDBUILD log file "Top.bld"...

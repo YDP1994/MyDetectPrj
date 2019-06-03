@@ -39,8 +39,6 @@ module Top(
 	 
 	 //ethernet
 	 output e_reset,	
-    output e_mdc,                      //MDIO的时钟信号，用于读写PHY的寄存器
-	 inout  e_mdio,                     //MDIO的数据信号，用于读写PHY的寄存器	
 	 input  e_rxc,                      //125Mhz ethernet gmii rx clock\   
 	 output e_gtxc,                     //25Mhz ethernet gmii tx clock  
 	 output e_txen,                     //GMII 发送数据有效信号	

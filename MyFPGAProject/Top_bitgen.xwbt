@@ -1,0 +1,8 @@
+INTSTYLE=ise
+INFILE=E:\MyTangCeProject\MyFPGAProject\Top.ncd
+OUTFILE=E:\MyTangCeProject\MyFPGAProject\Top.bit
+FAMILY=Spartan6
+PART=xc6slx16-2csg324
+WORKINGDIR=E:\MyTangCeProject\MyFPGAProject
+LICENSE=WebPack
+USER_INFO=_

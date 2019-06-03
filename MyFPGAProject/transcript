@@ -17,221 +17,115 @@
 # ** Warning: (vlib-34) Library already exists at "work".
 # 
 # Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
-# Start time: 14:37:30 on Jun 01,2019
+# Start time: 14:44:48 on Jun 01,2019
 # vlog -reportprogress 300 ip/pllClock.v 
 # -- Compiling module pllClock
 # 
 # Top level modules:
 # 	pllClock
-# End time: 14:37:30 on Jun 01,2019, Elapsed time: 0:00:00
+# End time: 14:44:48 on Jun 01,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
-# Start time: 14:37:30 on Jun 01,2019
+# Start time: 14:44:48 on Jun 01,2019
 # vlog -reportprogress 300 design/Send.v 
 # -- Compiling module Send
 # 
 # Top level modules:
 # 	Send
-# End time: 14:37:30 on Jun 01,2019, Elapsed time: 0:00:00
+# End time: 14:44:48 on Jun 01,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
-# Start time: 14:37:30 on Jun 01,2019
+# Start time: 14:44:48 on Jun 01,2019
 # vlog -reportprogress 300 design/crc.v 
 # -- Compiling module crc
 # 
 # Top level modules:
 # 	crc
-# End time: 14:37:30 on Jun 01,2019, Elapsed time: 0:00:00
+# End time: 14:44:48 on Jun 01,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
-# Start time: 14:37:30 on Jun 01,2019
+# Start time: 14:44:49 on Jun 01,2019
 # vlog -reportprogress 300 ipcore_dir/Fifo/myFIFO.v 
 # -- Compiling module myFIFO
 # 
 # Top level modules:
 # 	myFIFO
-# End time: 14:37:30 on Jun 01,2019, Elapsed time: 0:00:00
+# End time: 14:44:49 on Jun 01,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
-# Start time: 14:37:30 on Jun 01,2019
+# Start time: 14:44:49 on Jun 01,2019
 # vlog -reportprogress 300 ipcore_dir/chirpRom/chirpRom.v 
 # -- Compiling module chirpRom
 # 
 # Top level modules:
 # 	chirpRom
-# End time: 14:37:30 on Jun 01,2019, Elapsed time: 0:00:00
+# End time: 14:44:49 on Jun 01,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
-# Start time: 14:37:30 on Jun 01,2019
+# Start time: 14:44:49 on Jun 01,2019
 # vlog -reportprogress 300 design/udpSend.v 
 # -- Compiling module udpSend
 # 
 # Top level modules:
 # 	udpSend
-# End time: 14:37:30 on Jun 01,2019, Elapsed time: 0:00:00
+# End time: 14:44:49 on Jun 01,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
-# Start time: 14:37:30 on Jun 01,2019
+# Start time: 14:44:49 on Jun 01,2019
 # vlog -reportprogress 300 design/Tx.v 
 # -- Compiling module Tx
 # 
 # Top level modules:
 # 	Tx
-# End time: 14:37:30 on Jun 01,2019, Elapsed time: 0:00:00
+# End time: 14:44:49 on Jun 01,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
-# Start time: 14:37:30 on Jun 01,2019
+# Start time: 14:44:49 on Jun 01,2019
 # vlog -reportprogress 300 design/Re.v 
 # -- Compiling module Re
 # 
 # Top level modules:
 # 	Re
-# End time: 14:37:30 on Jun 01,2019, Elapsed time: 0:00:00
+# End time: 14:44:49 on Jun 01,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
-# Start time: 14:37:30 on Jun 01,2019
+# Start time: 14:44:49 on Jun 01,2019
 # vlog -reportprogress 300 design/Ctrl.v 
 # -- Compiling module Ctrl
 # 
 # Top level modules:
 # 	Ctrl
-# End time: 14:37:30 on Jun 01,2019, Elapsed time: 0:00:00
+# End time: 14:44:49 on Jun 01,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
-# Start time: 14:37:30 on Jun 01,2019
+# Start time: 14:44:49 on Jun 01,2019
 # vlog -reportprogress 300 design/Top.v 
 # -- Compiling module Top
 # 
 # Top level modules:
 # 	Top
-# End time: 14:37:31 on Jun 01,2019, Elapsed time: 0:00:01
+# End time: 14:44:49 on Jun 01,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
-# Start time: 14:37:31 on Jun 01,2019
-# vlog -reportprogress 300 sim/tb_top.v 
-# -- Compiling module tb_top
-# ** Error: (vlog-13069) sim/tb_top.v(70): near ")": syntax error, unexpected ')', expecting .* or '.'.
-# 
-# End time: 14:37:31 on Jun 01,2019, Elapsed time: 0:00:00
-# Errors: 1, Warnings: 0
-# ** Error: D:/Modelsim/win64/vlog failed.
-# Error in macro ./tb_top.fdo line 33
-# D:/Modelsim/win64/vlog failed.
-#     while executing
-# "vlog  "sim/tb_top.v""
-do {tb_top.fdo}
-# ** Warning: (vlib-34) Library already exists at "work".
-# 
-# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
-# Start time: 14:37:48 on Jun 01,2019
-# vlog -reportprogress 300 ip/pllClock.v 
-# -- Compiling module pllClock
-# 
-# Top level modules:
-# 	pllClock
-# End time: 14:37:48 on Jun 01,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
-# Start time: 14:37:48 on Jun 01,2019
-# vlog -reportprogress 300 design/Send.v 
-# -- Compiling module Send
-# 
-# Top level modules:
-# 	Send
-# End time: 14:37:48 on Jun 01,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
-# Start time: 14:37:48 on Jun 01,2019
-# vlog -reportprogress 300 design/crc.v 
-# -- Compiling module crc
-# 
-# Top level modules:
-# 	crc
-# End time: 14:37:48 on Jun 01,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
-# Start time: 14:37:48 on Jun 01,2019
-# vlog -reportprogress 300 ipcore_dir/Fifo/myFIFO.v 
-# -- Compiling module myFIFO
-# 
-# Top level modules:
-# 	myFIFO
-# End time: 14:37:48 on Jun 01,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
-# Start time: 14:37:48 on Jun 01,2019
-# vlog -reportprogress 300 ipcore_dir/chirpRom/chirpRom.v 
-# -- Compiling module chirpRom
-# 
-# Top level modules:
-# 	chirpRom
-# End time: 14:37:48 on Jun 01,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
-# Start time: 14:37:48 on Jun 01,2019
-# vlog -reportprogress 300 design/udpSend.v 
-# -- Compiling module udpSend
-# 
-# Top level modules:
-# 	udpSend
-# End time: 14:37:48 on Jun 01,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
-# Start time: 14:37:48 on Jun 01,2019
-# vlog -reportprogress 300 design/Tx.v 
-# -- Compiling module Tx
-# 
-# Top level modules:
-# 	Tx
-# End time: 14:37:48 on Jun 01,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
-# Start time: 14:37:48 on Jun 01,2019
-# vlog -reportprogress 300 design/Re.v 
-# -- Compiling module Re
-# 
-# Top level modules:
-# 	Re
-# End time: 14:37:48 on Jun 01,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
-# Start time: 14:37:48 on Jun 01,2019
-# vlog -reportprogress 300 design/Ctrl.v 
-# -- Compiling module Ctrl
-# 
-# Top level modules:
-# 	Ctrl
-# End time: 14:37:48 on Jun 01,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
-# Start time: 14:37:48 on Jun 01,2019
-# vlog -reportprogress 300 design/Top.v 
-# -- Compiling module Top
-# 
-# Top level modules:
-# 	Top
-# End time: 14:37:48 on Jun 01,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
-# Start time: 14:37:48 on Jun 01,2019
+# Start time: 14:44:49 on Jun 01,2019
 # vlog -reportprogress 300 sim/tb_top.v 
 # -- Compiling module tb_top
 # 
 # Top level modules:
 # 	tb_top
-# End time: 14:37:48 on Jun 01,2019, Elapsed time: 0:00:00
+# End time: 14:44:49 on Jun 01,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
-# Start time: 14:37:49 on Jun 01,2019
+# Start time: 14:44:49 on Jun 01,2019
 # vlog -reportprogress 300 D:/Xilinx/Xilinx14.7/14.7/ISE_DS/ISE/verilog/src/glbl.v 
 # -- Compiling module glbl
 # 
 # Top level modules:
 # 	glbl
-# End time: 14:37:49 on Jun 01,2019, Elapsed time: 0:00:00
+# End time: 14:44:49 on Jun 01,2019, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -gui -do "do {tb_top.fdo}" 
-# Start time: 14:37:49 on Jun 01,2019
+# Start time: 14:44:49 on Jun 01,2019
 # ** Note: (vsim-3813) Design is being optimized due to module recompilation...
 # 
 # ** Note: (vopt-143) Recognized 1 FSM in module "Ctrl(fast)".
@@ -267,171 +161,10 @@ do {tb_top.fdo}
 # 
 #           File in use by: Lenovo  Hostname: DESKTOP-7DVRM4L  ProcessID: 8452
 # 
-#           Attempting to use alternate WLF file "./wlftcwst4m".
+#           Attempting to use alternate WLF file "./wlft4vcq5a".
 # ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
 # 
-#           Using alternate file: ./wlftcwst4m
-# 
-# .main_pane.wave.interior.cs.body.pw.wf
-# .main_pane.structure.interior.cs.body.struct
-# .main_pane.objects.interior.cs.body.tree
-#  Block Memory Generator CORE Generator module loading initial data...
-#  Block Memory Generator data initialization complete.
-# Block Memory Generator CORE Generator module tb_top.uut.Tx_inst.MyChirp.inst.native_mem_module.blk_mem_gen_v7_3_inst is using a behavioral model for simulation which will not precisely model memory collision behavior.
-# WARNING: Behavioral models for independent clock FIFO configurations do not model synchronization delays. The behavioral models are functionally correct, and will represent the behavior of the configured FIFO. See the FIFO Generator User Guide for more information.
-run
-do {tb_top.fdo}
-# ** Warning: (vlib-34) Library already exists at "work".
-# 
-# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
-# Start time: 14:39:19 on Jun 01,2019
-# vlog -reportprogress 300 ip/pllClock.v 
-# -- Compiling module pllClock
-# 
-# Top level modules:
-# 	pllClock
-# End time: 14:39:19 on Jun 01,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
-# Start time: 14:39:20 on Jun 01,2019
-# vlog -reportprogress 300 design/Send.v 
-# -- Compiling module Send
-# 
-# Top level modules:
-# 	Send
-# End time: 14:39:20 on Jun 01,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
-# Start time: 14:39:20 on Jun 01,2019
-# vlog -reportprogress 300 design/crc.v 
-# -- Compiling module crc
-# 
-# Top level modules:
-# 	crc
-# End time: 14:39:20 on Jun 01,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
-# Start time: 14:39:20 on Jun 01,2019
-# vlog -reportprogress 300 ipcore_dir/Fifo/myFIFO.v 
-# -- Compiling module myFIFO
-# 
-# Top level modules:
-# 	myFIFO
-# End time: 14:39:20 on Jun 01,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
-# Start time: 14:39:20 on Jun 01,2019
-# vlog -reportprogress 300 ipcore_dir/chirpRom/chirpRom.v 
-# -- Compiling module chirpRom
-# 
-# Top level modules:
-# 	chirpRom
-# End time: 14:39:20 on Jun 01,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
-# Start time: 14:39:20 on Jun 01,2019
-# vlog -reportprogress 300 design/udpSend.v 
-# -- Compiling module udpSend
-# 
-# Top level modules:
-# 	udpSend
-# End time: 14:39:20 on Jun 01,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
-# Start time: 14:39:20 on Jun 01,2019
-# vlog -reportprogress 300 design/Tx.v 
-# -- Compiling module Tx
-# 
-# Top level modules:
-# 	Tx
-# End time: 14:39:20 on Jun 01,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
-# Start time: 14:39:20 on Jun 01,2019
-# vlog -reportprogress 300 design/Re.v 
-# -- Compiling module Re
-# 
-# Top level modules:
-# 	Re
-# End time: 14:39:20 on Jun 01,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
-# Start time: 14:39:20 on Jun 01,2019
-# vlog -reportprogress 300 design/Ctrl.v 
-# -- Compiling module Ctrl
-# 
-# Top level modules:
-# 	Ctrl
-# End time: 14:39:20 on Jun 01,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
-# Start time: 14:39:20 on Jun 01,2019
-# vlog -reportprogress 300 design/Top.v 
-# -- Compiling module Top
-# 
-# Top level modules:
-# 	Top
-# End time: 14:39:20 on Jun 01,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
-# Start time: 14:39:20 on Jun 01,2019
-# vlog -reportprogress 300 sim/tb_top.v 
-# -- Compiling module tb_top
-# 
-# Top level modules:
-# 	tb_top
-# End time: 14:39:20 on Jun 01,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# Model Technology ModelSim SE-64 vlog 10.4 Compiler 2014.12 Dec  3 2014
-# Start time: 14:39:20 on Jun 01,2019
-# vlog -reportprogress 300 D:/Xilinx/Xilinx14.7/14.7/ISE_DS/ISE/verilog/src/glbl.v 
-# -- Compiling module glbl
-# 
-# Top level modules:
-# 	glbl
-# End time: 14:39:20 on Jun 01,2019, Elapsed time: 0:00:00
-# Errors: 0, Warnings: 0
-# vsim 
-# Start time: 14:39:23 on Jun 01,2019
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# 
-# ** Note: (vopt-143) Recognized 1 FSM in module "Ctrl(fast)".
-# 
-# Loading work.tb_top(fast)
-# Loading work.Top(fast)
-# Loading work.Tx(fast)
-# Loading work.chirpRom(fast)
-# Loading xilinxcorelib_ver.BLK_MEM_GEN_V7_3(fast)
-# Loading xilinxcorelib_ver.BLK_MEM_GEN_V7_3_mem_module(fast)
-# Loading xilinxcorelib_ver.BLK_MEM_GEN_V7_3_output_stage(fast)
-# Loading xilinxcorelib_ver.BLK_MEM_GEN_V7_3_softecc_output_reg_stage(fast)
-# Loading work.Ctrl(fast)
-# Loading work.Re(fast)
-# Loading work.myFIFO(fast)
-# Loading xilinxcorelib_ver.FIFO_GENERATOR_V9_3(fast)
-# Loading xilinxcorelib_ver.FIFO_GENERATOR_V9_3_CONV_VER(fast)
-# Loading xilinxcorelib_ver.fifo_generator_v9_3_bhv_ver_as(fast)
-# Loading xilinxcorelib_ver.fifo_generator_v9_3_sync_stage(fast)
-# Loading work.udpSend(fast)
-# Loading work.Send(fast)
-# Loading work.crc(fast)
-# Loading work.pllClock(fast)
-# Loading unisims_ver.IBUFG(fast)
-# Loading unisims_ver.DCM_SP(fast)
-# Loading unisims_ver.dcm_sp_clock_divide_by_2(fast)
-# Loading unisims_ver.dcm_sp_maximum_period_check(fast)
-# Loading unisims_ver.dcm_sp_maximum_period_check(fast__1)
-# Loading unisims_ver.dcm_sp_clock_lost(fast)
-# Loading unisims_ver.BUFG(fast)
-# Loading work.glbl(fast)
-# ** Warning: (vsim-WLF-5000) WLF file currently in use: vsim.wlf
-# 
-#           File in use by: Lenovo  Hostname: DESKTOP-7DVRM4L  ProcessID: 8452
-# 
-#           Attempting to use alternate WLF file "./wlft45v62j".
-# ** Warning: (vsim-WLF-5001) Could not open WLF file: vsim.wlf
-# 
-#           Using alternate file: ./wlft45v62j
+#           Using alternate file: ./wlft4vcq5a
 # 
 # .main_pane.wave.interior.cs.body.pw.wf
 # .main_pane.structure.interior.cs.body.struct
@@ -442,5 +175,6 @@ do {tb_top.fdo}
 # WARNING: Behavioral models for independent clock FIFO configurations do not model synchronization delays. The behavioral models are functionally correct, and will represent the behavior of the configured FIFO. See the FIFO Generator User Guide for more information.
 run
 run
-# End time: 14:40:04 on Jun 01,2019, Elapsed time: 0:00:41
+run
+# End time: 08:45:15 on Jun 03,2019, Elapsed time: 42:00:26
 # Errors: 0, Warnings: 2
